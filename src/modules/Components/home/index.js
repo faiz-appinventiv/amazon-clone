@@ -82,7 +82,7 @@ export default function HomePage({ navigation }) {
         console.log("Inside TabView", item)
         // console.log('img:',item.img)
         return (
-            <TouchableOpacity style={{marginHorizontal:15}}
+            <TouchableOpacity style={{ marginHorizontal: 15 }}
             >
                 <Image source={{ uri: item.image }}
                     style={{ height: 40, width: 50, borderRadius: 50, overflow: 'hidden', alignSelf: 'center' }}
@@ -97,14 +97,14 @@ export default function HomePage({ navigation }) {
         <View style={styles.container}>
             <SearchHeader style={styles.SearchHeader} />
             <ScrollView bounces={false}>
-            <FlatList
-                data={tabArray}
-                renderItem={(item) => (tabView(item))}
-                horizontal
-                bounces={false}
-                style={{ height: 70 }}
-                showsHorizontalScrollIndicator={false}
-            />
+                <FlatList
+                    data={tabArray}
+                    renderItem={(item) => (tabView(item))}
+                    horizontal
+                    bounces={false}
+                    style={{ height: 70 }}
+                    showsHorizontalScrollIndicator={false}
+                />
                 <SliderBox
                     images={imgArray}
                     imageLoadingColor={"#70feff"}
@@ -116,7 +116,7 @@ export default function HomePage({ navigation }) {
 
                     }}
                 />
-                <View style={styles.productSlide}>
+                <View style={styles.youMightLike}>
                     <Text style={styles.productLikeHeader}>{"You Might Like"}</Text>
                     <FlatList
                         data={data}
@@ -130,47 +130,59 @@ export default function HomePage({ navigation }) {
                         bounces={false}
                     />
                 </View>
-                <View style={styles.productSlide}>
-                    <Text style={styles.productLikeHeader}>{"You Might Like"}</Text>
-                    <FlatList
-                        data={data}
-                        renderItem={(item) => (renderItem(item))}
-                        horizontal={true}
-                        keyExtractor={(item) => item.id}
-                        ListEmptyComponent={listEmpty}
-                        ItemSeparatorComponent={() => (<View style={{ marginRight: 10 }}></View>)}
-                        style={styles.productSlide}
-                        showsHorizontalScrollIndicator={false}
-                        bounces={false}
+                <View style={{
+                    // backgroundColor:'red',
+                    height: 230,
+                    width: '100%',
+                    marginBottom: 10,
+                    marginTop: 10,
+                }}>
+                    <Image
+                        source={require('../../../assets/images/oneplusBanner.jpeg')}
+                        resizeMode={'contain'}
+                        // resizeMethod={'scale'}
+                        style={{
+                            height: '100%',
+                            width: '100%',
+                            // marginTop:-100
+
+                        }}
                     />
                 </View>
-                <View style={styles.productSlide}>
-                    <Text style={styles.productLikeHeader}>{"You Might Like"}</Text>
-                    <FlatList
-                        data={data}
-                        renderItem={(item) => (renderItem(item))}
-                        horizontal={true}
-                        keyExtractor={(item) => item.id}
-                        ListEmptyComponent={listEmpty}
-                        ItemSeparatorComponent={() => (<View style={{ marginRight: 10 }}></View>)}
-                        style={styles.productSlide}
-                        showsHorizontalScrollIndicator={false}
-                        bounces={false}
-                    />
-                </View>
-                <View style={styles.productSlide}>
-                    <Text style={styles.productLikeHeader}>{"You Might Like"}</Text>
-                    <FlatList
-                        data={data}
-                        renderItem={(item) => (renderItem(item))}
-                        horizontal={true}
-                        keyExtractor={(item) => item.id}
-                        ListEmptyComponent={listEmpty}
-                        ItemSeparatorComponent={() => (<View style={{ marginRight: 10 }}></View>)}
-                        style={styles.productSlide}
-                        showsHorizontalScrollIndicator={false}
-                        bounces={false}
-                    />
+                <View style={{alignItems:'center'}}>
+                    <View style={styles.fourStackInner}>
+                        <TouchableOpacity style={styles.fourStack}>
+                            <Image
+                                source={require('../../../assets/images/clothing.jpeg')}
+                                style={styles.fourStackImg} 
+                                />
+                            <Text style={styles.fourStackText}>Clothing</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.fourStack}>
+                            <Image
+                                source={require('../../../assets/images/beauty.webp')}
+                                style={styles.fourStackImg}
+                            />
+                            <Text style={styles.fourStackText}>Beauty</Text>
+                        </TouchableOpacity>
+                    </View>
+                    <View style={styles.fourStackInner}>
+                        <TouchableOpacity style={styles.fourStack}>
+                            <Image
+                                source={require('../../../assets/images/footwear.jpeg')}
+                                style={styles.fourStackImg}
+                            />
+                            <Text style={styles.fourStackText}>Footwear</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.fourStack}>
+                            <Image
+                                source={require('../../../assets/images/watches.jpeg')}
+                                style={styles.fourStackImg}
+                            />
+                            <Text style={styles.fourStackText}>Watches</Text>
+                        </TouchableOpacity>
+                    </View>
+
                 </View>
             </ScrollView>
             {/* </View> */}

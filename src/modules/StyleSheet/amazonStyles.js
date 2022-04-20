@@ -79,13 +79,13 @@ const styles = StyleSheet.create({
         resizeMode: 'contain'
     },
     productSlide: {
-        height: 350,
-        marginTop: 20,
+        height: 220,
+        marginTop: 15,
         // marginLeft: 10,
     },
     product: {
         width: 160,
-        paddingVertical: 10,
+        // paddingVertical: 10,
         // height:'100%',
         shadowColor: "#000",
         shadowOffset: {
@@ -194,6 +194,36 @@ const styles = StyleSheet.create({
     offerText: {
         fontSize: 15,
         fontWeight: '600',
+    },
+    youMightLike:{
+        marginTop:20
+    },
+    fourStackImg:{
+        height:200,
+        width:190,
+        borderRadius:20,
+        margin:5,
+        // marginVertical:5
+    },
+    fourStackInner:{
+        flexDirection:'row',
+        justifyContent:'center',
+        alignItems:'center',
+        margin:5,
+        // marginHorizontal:10
+    },
+    fourStackText:{
+        fontSize:18,
+        fontWeight:'400',
+        textAlign:'center',
+    },
+    fourStack:{
+        height:220,
+        width:190,
+        borderRadius:20,
+        margin:5,
+        justifyContent:'center'
+        // marginVertical:5
     }
 })
 
