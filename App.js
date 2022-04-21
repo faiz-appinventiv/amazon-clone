@@ -1,12 +1,18 @@
+import React from 'react'
+import {SafeAreaView,Text} from 'react-native'
+import RootRouter from './src/modules/router'
+import { PersistGate } from 'redux-persist/integration/react'
+import { persistor, store } from './src/modules/store/index'
+import { Provider } from 'react-redux'
 
-import React from 'react';
-import RootRouter from './src/modules/router/index';
 
 
-function App() {
+export default function App() {
   return (
-    <RootRouter/>
-  );
+    <Provider store={store}>
+      <PersistGate persistor={persistor}>
+        <RootRouter />
+      </PersistGate>
+    </Provider>
+    )
 }
-
-export default App;

@@ -2,11 +2,16 @@ import { View, Text,Image } from 'react-native'
 import React from 'react'
 import styles from '../../StyleSheet/amazonStyles'
 import { useEffect } from 'react'
+import { useSelector } from 'react-redux'
 
 export default function SplashScreen({navigation}) {
+    
+  const {login} =useSelector(store=>store.AuthReducer)
 
     useEffect(()=>{
         setTimeout(()=>{
+          (login)?
+            navigation.navigate('AuthRouter'):
             navigation.navigate('BottomTab')
         },6000)
     })

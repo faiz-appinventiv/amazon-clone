@@ -195,35 +195,79 @@ const styles = StyleSheet.create({
         fontSize: 15,
         fontWeight: '600',
     },
-    youMightLike:{
-        marginTop:20
+    youMightLike: {
+        marginTop: 20
     },
-    fourStackImg:{
-        height:200,
-        width:190,
-        borderRadius:20,
-        margin:5,
+    fourStackImg: {
+        height: 200,
+        width: 190,
+        borderRadius: 20,
+        margin: 5,
         // marginVertical:5
     },
-    fourStackInner:{
-        flexDirection:'row',
-        justifyContent:'center',
-        alignItems:'center',
-        margin:5,
+    fourStackInner: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        margin: 5,
         // marginHorizontal:10
     },
-    fourStackText:{
-        fontSize:18,
-        fontWeight:'400',
-        textAlign:'center',
+    fourStackText: {
+        fontSize: 18,
+        fontWeight: '400',
+        textAlign: 'center',
     },
-    fourStack:{
-        height:220,
-        width:190,
-        borderRadius:20,
-        margin:5,
-        justifyContent:'center'
+    fourStack: {
+        height: 220,
+        width: 190,
+        borderRadius: 20,
+        margin: 5,
+        justifyContent: 'center'
         // marginVertical:5
+    },
+    authLogoImage: {
+        height: 100,
+        width: 300,
+        alignSelf: 'center',
+        marginTop: 20,
+    },
+    signInScreenHeaderText: {
+        fontSize: 20,
+        fontWeight: '700',
+        textAlign: 'center',
+        marginBottom: 10
+    },
+    sigInPerkText: {
+        fontSize: 16,
+        marginBottom: 15
+    },
+    loginStartTextView: {
+        paddingHorizontal:30,
+        marginTop:20
+    },
+    signInButton: {
+        backgroundColor: '#EEB559',
+        height: 38,
+        marginHorizontal: 16,
+        borderRadius: 5,
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginBottom: 10,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 1,
+        },
+        shadowOpacity: 0.22,
+        shadowRadius: 2.22,
+
+        elevation: 3,
+    },
+    authButtonText: {
+        fontSize: 15,
+    },
+    loginButton:{
+        marginVertical:15
     }
 })
 
