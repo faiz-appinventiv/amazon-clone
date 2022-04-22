@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
         marginLeft: '3%',
         backgroundColor: 'white',
         flexDirection: 'row',
-        width: width *0.85,
+        width: width * 0.85,
         height: height/20,
         shadowColor: "#000",
         shadowOffset: {
