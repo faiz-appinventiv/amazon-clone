@@ -61,8 +61,8 @@ export default function HomePage({ navigation }) {
                         <Image source={{ uri: item.image }}
                             style={styles.productImage}
                         />
-                        <Text numberOfLines={1} style={{ padding: 10 }}>{item.title}</Text>
-                        <Text style={{ paddingHorizontal: 10 }}>$ {item.price}</Text>
+                        <Text numberOfLines={1} style={{ padding: 10 ,color:'black'}}>{item.title}</Text>
+                        <Text style={{ paddingHorizontal: 10, color:'black' }}>$ {item.price}</Text>
                     </TouchableOpacity>
                 </View>
             )
@@ -79,30 +79,30 @@ export default function HomePage({ navigation }) {
     }
 
     const tabView = ({ item }) => {
-        console.log("Inside TabView", item)
+        // console.log("Inside TabView", item)
         // console.log('img:',item.img)
         return (
-            <TouchableOpacity style={{ marginHorizontal: 15 }}
+            <TouchableOpacity style={{ marginHorizontal: 10 }}
             >
                 <Image source={{ uri: item.image }}
-                    style={{ height: 40, width: 50, borderRadius: 50, overflow: 'hidden', alignSelf: 'center' }}
+                    style={{ height: 40, width: 40, borderRadius: 30, overflow: 'hidden', alignSelf: 'center' }}
                     resizeMode={'contain'}
                 />
-                <Text>{item.title}</Text>
+                <Text style={{color:'black'}}>{item.title}</Text>
             </TouchableOpacity>
         )
     }
 
     return (
-        <View style={styles.container}>
-            <SearchHeader style={styles.SearchHeader} />
+        <SafeAreaView style={styles.container}>
+            <SearchHeader/>
             <ScrollView bounces={false}>
                 <FlatList
                     data={tabArray}
                     renderItem={(item) => (tabView(item))}
                     horizontal
                     bounces={false}
-                    style={{ height: 70 }}
+                    style={{ height: 55 }}
                     showsHorizontalScrollIndicator={false}
                 />
                 <SliderBox
@@ -149,16 +149,18 @@ export default function HomePage({ navigation }) {
                         }}
                     />
                 </View>
-                <View style={{alignItems:'center'}}>
+                <View>
                     <View style={styles.fourStackInner}>
-                        <TouchableOpacity style={styles.fourStack}>
+                        <TouchableOpacity style={styles.fourStack}
+                        activeOpacity={0.9}>
                             <Image
                                 source={require('../../../assets/images/clothing.jpeg')}
                                 style={styles.fourStackImg} 
                                 />
                             <Text style={styles.fourStackText}>Clothing</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.fourStack}>
+                        <TouchableOpacity style={styles.fourStack}
+                        activeOpacity={0.9}>
                             <Image
                                 source={require('../../../assets/images/beauty.webp')}
                                 style={styles.fourStackImg}
@@ -167,14 +169,17 @@ export default function HomePage({ navigation }) {
                         </TouchableOpacity>
                     </View>
                     <View style={styles.fourStackInner}>
-                        <TouchableOpacity style={styles.fourStack}>
+                        <TouchableOpacity style={styles.fourStack}
+                        activeOpacity={0.9}>
                             <Image
                                 source={require('../../../assets/images/footwear.jpeg')}
                                 style={styles.fourStackImg}
                             />
                             <Text style={styles.fourStackText}>Footwear</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.fourStack}>
+                        <TouchableOpacity 
+                        activeOpacity={0.9}
+                        style={styles.fourStack}>
                             <Image
                                 source={require('../../../assets/images/watches.jpeg')}
                                 style={styles.fourStackImg}
@@ -182,10 +187,9 @@ export default function HomePage({ navigation }) {
                             <Text style={styles.fourStackText}>Watches</Text>
                         </TouchableOpacity>
                     </View>
-
                 </View>
             </ScrollView>
             {/* </View> */}
-        </View>
+        </SafeAreaView>
     )
 }

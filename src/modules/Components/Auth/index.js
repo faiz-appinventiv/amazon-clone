@@ -3,6 +3,7 @@ import React from 'react'
 import styles from '../../StyleSheet/amazonStyles'
 
 export default function StartScreen({navigation}) {
+  console.log('navig',navigation)
   return (
     <SafeAreaView>
       <Image
@@ -33,7 +34,13 @@ export default function StartScreen({navigation}) {
         }}>
           <Text style={styles.authButtonText}>{"New to Amazon.in? Create an account"}</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={{...styles.signInButton,backgroundColor:'#E2E0DD'}}>
+        <TouchableOpacity style={{...styles.signInButton,backgroundColor:'#E2E0DD'}}
+        onPress={()=>{
+          navigation.reset({
+            index:0,
+            routes:[{name:'BottomTab'}]
+        })
+        }}>
           <Text style={styles.authButtonText}>{"Skip sign in"}</Text>
         </TouchableOpacity>
       </View>

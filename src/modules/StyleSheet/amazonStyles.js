@@ -1,4 +1,6 @@
-import { StyleSheet } from "react-native"
+import { StyleSheet, Dimensions } from "react-native"
+
+const {height,width} =Dimensions.get('screen')
 
 const styles = StyleSheet.create({
     container: {
@@ -6,13 +8,13 @@ const styles = StyleSheet.create({
     },
     search: {
         borderRadius: 5,
-        marginTop: '10%',
         padding: 10,
         margin: 6,
         marginLeft: '3%',
         backgroundColor: 'white',
         flexDirection: 'row',
-        width: "85%",
+        width: width *0.85,
+        height: height/20,
         shadowColor: "#000",
         shadowOffset: {
             width: 0,
@@ -24,14 +26,15 @@ const styles = StyleSheet.create({
         elevation: 4,
     },
     searchBar: {
-        marginLeft: 10,
-        marginRight: 10,
+        marginHorizontal:10,
         borderRadius: 10,
         fontSize: 18,
+        color:'black'
     },
     headerText: {
         fontSize: 30,
         fontWeight: '800',
+        color:'black'
     },
     header: {
         backgroundColor: '#70feff',
@@ -48,8 +51,9 @@ const styles = StyleSheet.create({
     },
     micTouchable: {
         position: 'absolute',
-        right: 10,
-        marginTop: "12%",
+        right: 15,
+        top:15
+        // marginTop: "12%",
     },
     scanImage: {
         height: 20,
@@ -68,7 +72,8 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
     },
     addressText: {
-        marginLeft: '3%'
+        marginLeft: '3%',
+        color:'black'
     },
     imgSliderView: {
         marginTop: "1%",
@@ -103,6 +108,7 @@ const styles = StyleSheet.create({
         fontSize: 25,
         fontWeight: '600',
         marginLeft: 10,
+        color:'black'
     },
     loading: {
         height: 20,
@@ -111,7 +117,7 @@ const styles = StyleSheet.create({
         // justifyContent:'center'
     },
     SearchHeader: {
-        height: 125,
+        height:100,
     },
     productPage: {
 
@@ -154,7 +160,8 @@ const styles = StyleSheet.create({
     productMRPText: {
         fontSize: 20,
         fontWeight: '700',
-        color: 'grey'
+        color: 'grey',
+        color:'black'
     },
     productPrice: {
         marginLeft: 40,
@@ -179,7 +186,8 @@ const styles = StyleSheet.create({
     },
     titleText: {
         fontSize: 17,
-        marginHorizontal: 20
+        marginHorizontal: 20,
+        color:'black'
     },
     offersPortion: {
         marginHorizontal: 10,
@@ -194,36 +202,10 @@ const styles = StyleSheet.create({
     offerText: {
         fontSize: 15,
         fontWeight: '600',
+        color:'black'
     },
     youMightLike: {
         marginTop: 20
-    },
-    fourStackImg: {
-        height: 200,
-        width: 190,
-        borderRadius: 20,
-        margin: 5,
-        // marginVertical:5
-    },
-    fourStackInner: {
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
-        margin: 5,
-        // marginHorizontal:10
-    },
-    fourStackText: {
-        fontSize: 18,
-        fontWeight: '400',
-        textAlign: 'center',
-    },
-    fourStack: {
-        height: 220,
-        width: 190,
-        borderRadius: 20,
-        margin: 5,
-        justifyContent: 'center'
-        // marginVertical:5
     },
     authLogoImage: {
         height: 100,
@@ -235,15 +217,18 @@ const styles = StyleSheet.create({
         fontSize: 20,
         fontWeight: '700',
         textAlign: 'center',
-        marginBottom: 10
+        marginBottom: 10,
+        color:'black'
     },
     sigInPerkText: {
         fontSize: 16,
-        marginBottom: 15
+        marginBottom: 15,
+        color:'black'
     },
     loginStartTextView: {
         paddingHorizontal:30,
-        marginTop:20
+        marginTop:20,
+        color:'black'
     },
     signInButton: {
         backgroundColor: '#EEB559',
@@ -265,10 +250,37 @@ const styles = StyleSheet.create({
     },
     authButtonText: {
         fontSize: 15,
+        color:'black'
     },
     loginButton:{
         marginVertical:15
-    }
+    },
+    fourStackImg: {
+        height: 175,
+        width: 175,
+        borderRadius: 20,
+    },
+    fourStackInner: {
+        flexDirection:'row',
+        justifyContent:'space-between',
+        marginHorizontal:12,
+        height:200
+    },
+    fourStackText: {
+        fontSize: 18,
+        fontWeight: '400',
+        alignSelf:'center',
+        color:'black'
+    },
+    // fourStack: {
+    //     height: 210,
+    //     width: 190,
+    //     borderRadius: 20,
+    //     margin: 5,
+    //     justifyContent: 'center',
+    //     alignItems:'center'
+    //     // marginVertical:5
+    // },
 })
 
 export default styles

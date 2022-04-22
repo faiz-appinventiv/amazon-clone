@@ -9,7 +9,9 @@ export default function SearchHeader({ navigation }) {
                 <View style={styles.search}>
                     <Image source={require('../../../assets/images/icons/search.png')}
                         style={styles.searchImage} />
-                    <TextInput placeholder='Search' style={styles.searchBar} />
+                    <TextInput placeholder='Search' 
+                        placeholderTextColor={'grey'}
+                    style={styles.searchBar} />
                     <TouchableOpacity style={styles.scanImageCon}
                         onPress={() => { }}>
                         <Image source={require('../../../assets/images/icons/scanner.png')} style={styles.scanImage} />

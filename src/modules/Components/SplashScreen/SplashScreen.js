@@ -11,8 +11,8 @@ export default function SplashScreen({navigation}) {
     useEffect(()=>{
         setTimeout(()=>{
           (login)?
-            navigation.navigate('AuthRouter'):
-            navigation.navigate('BottomTab')
+            navigation.replace('AuthRouter'):
+            navigation.replace('BottomTab')
         },6000)
     })
 

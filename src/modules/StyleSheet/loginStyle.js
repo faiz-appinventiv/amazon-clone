@@ -2,7 +2,10 @@ import { StyleSheet } from "react-native";
 
 const loginStyles = StyleSheet.create({
     container: {
-        paddingTop: 35
+
+    },
+    innerContainer:{
+        marginHorizontal:15
     },
     headerImage: {
         height: 40,
@@ -23,9 +26,9 @@ const loginStyles = StyleSheet.create({
         elevation: 5,
     },
     welcomeText: {
-        fontSize: 25,
-        marginHorizontal: 15,
+        fontSize: 24,
         marginVertical: 10,
+        color:'black'
     },
     statusImg: {
         height: 15,
@@ -34,7 +37,6 @@ const loginStyles = StyleSheet.create({
     form: {
         // marginHorizontal:15,
         backgroundColor: 'white',
-        marginHorizontal: 10,
         shadowColor: "#000",
         shadowOffset: {
             width: 0,
@@ -52,7 +54,7 @@ const loginStyles = StyleSheet.create({
     },
     headerTextView: {
         flexDirection: 'row',
-        marginLeft: 13,
+        // marginLeft: 13,
         alignItems: 'flex-end'
     },
     innerInactiveFormHeader: {
@@ -67,11 +69,13 @@ const loginStyles = StyleSheet.create({
         marginTop: 10,
         padding: 9,
         borderWidth: 1,
-        borderColor: '#ccc'
+        borderColor: '#ccc',
+        borderRadius:3,
+        color:'black'
     },
     signInButton: {
         backgroundColor: '#EEB559',
-        marginTop: 15,
+        marginTop: 10,
         height: 38,
         // marginHorizontal: 16,
         borderRadius: 5,
@@ -95,6 +99,7 @@ const loginStyles = StyleSheet.create({
     },
     privacyText: {
         fontSize: 11,
+        color:'black'
     },
     bottomLine: {
         borderBottomColor: 'white',
@@ -129,8 +134,73 @@ const loginStyles = StyleSheet.create({
     },
     warning:{
         marginVertical:10,
-        fontWeight:'400',
-        fontSize:14
+        fontWeight:'300',
+        fontSize:13.5,
+        color:'black'
+    },
+    warningText:{
+        color:'red'
+    },
+    emptyWarning:{
+        flexDirection:'row',
+        marginTop:5,
+        // justifyContent:'center'
+        alignItems:'center'
+    },
+    emailView:{
+        flexDirection:'row',
+    },
+    changeText:{
+        color:'#3DA8C3',
+    },
+    passwordInput:{
+        marginTop: 10,
+        padding: 9,
+        borderWidth: 1,
+        borderColor: '#aaa',
+        borderRadius:3,
+        color:'black'
+    },
+    showPassword:{
+        flexDirection:'row',
+        marginTop:10,
+        justifyContent:"space-between"
+        // alignItems:'center',
+        // justifyContent:'flex-start',
+        // backgroundColor:'red'
+    },
+    showPasswordTouchable:{
+        flexDirection:'row',
+        alignItems:'center',
+    },
+    orText:{
+        // textDecorationLine:''
+    },
+    noAccountHeader:{
+        fontWeight:'600',
+        fontSize:15,
+        color:'brown',
+        color:'black'
+    },
+    noAccountBody:{
+        fontSize:14,
+        marginTop:5,
+        color:'black'
+    },
+    noAccount:{
+        marginTop:10,
+        borderWidth:1,
+        borderColor:'brown',
+        borderRadius:5,
+    },
+    noAccountInner:{
+        borderWidth:3,
+        borderColor:'#FCE1B9',
+        borderRadius:5,
+        padding:8
+    },
+    loginEmailButton:{
+        color:'black'
     }
 })
 export default loginStyles
