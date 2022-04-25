@@ -5,6 +5,7 @@ import loginStyles from '../../StyleSheet/loginStyle'
 import styles from '../../StyleSheet/amazonStyles'
 import { useDispatch, useSelector } from 'react-redux'
 import { Register } from './action'
+import AsyncStorage from '@react-native-async-storage/async-storage'
 
 export default function Login({ navigation, route }) {
   const { toggleAccount } = route.params
@@ -20,6 +21,13 @@ export default function Login({ navigation, route }) {
   const [passwordWarning, setPasswordWarning] = useState(false)
   const [mobileWarning, setMobileWarning] = useState(false)
   const dispatch = useDispatch()
+  const [log,setLog]=useState({})
+
+  // AsyncStorage.getItem("Email").then((value) => {
+  //   setLog({ "Email": value });
+  //   console.log(value)
+  // })
+
 
   const { LoginData } = useSelector(store => store.AuthReducer)
   console.log("LoginData", LoginData)
@@ -77,7 +85,7 @@ export default function Login({ navigation, route }) {
 
   return (
     <SafeAreaView style={loginStyles.container}>
-      <KeyboardAwareScrollView>
+      <KeyboardAwareScrollView bounces={false}>
         <View style={loginStyles.header}>
           <Image
             source={require('../../../assets/images/amazonIn.png')}
@@ -134,6 +142,8 @@ export default function Login({ navigation, route }) {
                       <Text style={loginStyles.warningText}>{"Enter your email or mobile phone number"}</Text>
                     </View>}
                   <TextInput
+                    // value={createMobile4}
+                    maxLength={10}
                     placeholder='Mobile Number'
                     keyboardType='number-pad'
                     placeholderTextColor={'grey'}
@@ -153,6 +163,7 @@ export default function Login({ navigation, route }) {
                   <TextInput
                     placeholder='Email (optional)'
                     autoCapitalize='none'
+                    autoCorrect={false}
                     placeholderTextColor={'grey'}
                     style={loginStyles.signInInput}
                     onChangeText={(text) => {
@@ -162,6 +173,7 @@ export default function Login({ navigation, route }) {
                   <TextInput
                     placeholder='Set password'
                     placeholderTextColor={'grey'}
+                    autoCapitalize='none'
                     style={loginStyles.signInInput}
                     secureTextEntry={!showPassword}
                     onChangeText={(text) => {
@@ -241,6 +253,7 @@ export default function Login({ navigation, route }) {
                       setEmail(text)
                     }}
                     autoCapitalize={'none'}
+                    autoCorrect={false}
                     placeholder='Email or phone number'
                     style={loginStyles.signInInput}
                   />

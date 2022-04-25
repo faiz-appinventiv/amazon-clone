@@ -5,7 +5,8 @@ const loginStyles = StyleSheet.create({
 
     },
     innerContainer:{
-        marginHorizontal:15
+        marginHorizontal:15,
+        // borderRadius:100
     },
     headerImage: {
         height: 40,

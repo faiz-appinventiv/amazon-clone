@@ -7,11 +7,12 @@ const AuthReducer=(state=initial_State,action)=>{
     const {type,payload}=action
     switch(type){
         case 'Register':
+            // state.LoginData.push(payload)
             return {...state,LoginData:[...state.LoginData,payload]}
-        case 'Toggle Login':
+        case 'Toggle_Login':
             return{...state,...payload}
         default:
-            return{...state}
+            return state
     }
 }
 export default AuthReducer

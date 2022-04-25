@@ -1,16 +1,17 @@
 import { View, Text, TouchableOpacity, Image, TextInput, ScrollView, FlatList } from 'react-native'
 import React from 'react'
 import styles from '../../StyleSheet/amazonStyles'
+import { SafeAreaView } from 'react-native-safe-area-context'
 
 
 export default function Product({ navigation, route }) {
-  console.log("route.params", route.params)
+  // console.log("route.params", route.params)
 
   const back = () => {
     navigation.goBack()
   }
   return (
-    <View style={styles.productPage}>
+    <SafeAreaView style={styles.productPage}>
       <View style={styles.header}>
         <TouchableOpacity style={styles.backButtonTouchable}
           onPress={back}>
@@ -72,6 +73,6 @@ export default function Product({ navigation, route }) {
           /> */}
         </View>
       </ScrollView>
-    </View>
+    </SafeAreaView>
   )
 }

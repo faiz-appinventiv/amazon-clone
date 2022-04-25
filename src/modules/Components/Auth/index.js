@@ -3,7 +3,7 @@ import React from 'react'
 import styles from '../../StyleSheet/amazonStyles'
 
 export default function StartScreen({navigation}) {
-  console.log('navig',navigation)
+  // console.log('navig',navigation)
   return (
     <SafeAreaView>
       <Image

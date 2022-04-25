@@ -9,7 +9,7 @@ export function Register(payload) {
 export function ToggleLogin(payload) {
     return (dispatch) => {
         dispatch({
-            type: 'Register',
+            type: 'Toggle_Login',
             payload: payload
         })
     }

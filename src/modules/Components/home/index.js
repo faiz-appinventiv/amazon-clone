@@ -4,6 +4,8 @@ import { SliderBox } from "react-native-image-slider-box";
 import axios from 'axios'
 import styles from '../../StyleSheet/amazonStyles'
 import SearchHeader from './searchHeader'
+import { useDispatch } from 'react-redux';
+import { ToggleLogin } from '../Auth/action';
 
 export default function HomePage({ navigation }) {
     const [imgArray, setImageArray] = useState([
@@ -12,6 +14,7 @@ export default function HomePage({ navigation }) {
         "https://source.unsplash.com/1024x768/?girl",
         "https://source.unsplash.com/1024x768/?tree",
     ])
+    const dispatch=useDispatch()
     const [tabArray, setTabArray] = useState([{
         title: 'Mobiles',
         image: 'https://m.media-amazon.com/images/I/61fy+u9uqPL._SX569_.jpg'
@@ -61,8 +64,8 @@ export default function HomePage({ navigation }) {
                         <Image source={{ uri: item.image }}
                             style={styles.productImage}
                         />
-                        <Text numberOfLines={1} style={{ padding: 10 ,color:'black'}}>{item.title}</Text>
-                        <Text style={{ paddingHorizontal: 10, color:'black' }}>$ {item.price}</Text>
+                        <Text numberOfLines={1} style={{ padding: 10, color: 'black' }}>{item.title}</Text>
+                        <Text style={{ paddingHorizontal: 10, color: 'black' }}>$ {item.price}</Text>
                     </TouchableOpacity>
                 </View>
             )
@@ -88,14 +91,14 @@ export default function HomePage({ navigation }) {
                     style={{ height: 40, width: 40, borderRadius: 30, overflow: 'hidden', alignSelf: 'center' }}
                     resizeMode={'contain'}
                 />
-                <Text style={{color:'black'}}>{item.title}</Text>
+                <Text style={{ color: 'black' }}>{item.title}</Text>
             </TouchableOpacity>
         )
     }
 
     return (
         <SafeAreaView style={styles.container}>
-            <SearchHeader/>
+            <SearchHeader />
             <ScrollView bounces={false}>
                 <FlatList
                     data={tabArray}
@@ -152,15 +155,15 @@ export default function HomePage({ navigation }) {
                 <View>
                     <View style={styles.fourStackInner}>
                         <TouchableOpacity style={styles.fourStack}
-                        activeOpacity={0.9}>
+                            activeOpacity={0.9}>
                             <Image
                                 source={require('../../../assets/images/clothing.jpeg')}
-                                style={styles.fourStackImg} 
-                                />
+                                style={styles.fourStackImg}
+                            />
                             <Text style={styles.fourStackText}>Clothing</Text>
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.fourStack}
-                        activeOpacity={0.9}>
+                            activeOpacity={0.9}>
                             <Image
                                 source={require('../../../assets/images/beauty.webp')}
                                 style={styles.fourStackImg}
@@ -170,16 +173,26 @@ export default function HomePage({ navigation }) {
                     </View>
                     <View style={styles.fourStackInner}>
                         <TouchableOpacity style={styles.fourStack}
-                        activeOpacity={0.9}>
+                            onPress={() => {
+                                let payload = {
+                                    login: true
+                                }
+                                dispatch(ToggleLogin(payload))
+                                navigation.reset({
+                                    index:0,
+                                    routes:[{name:'AuthRouter'}]
+                                })
+                            }}
+                            activeOpacity={0.9}>
                             <Image
                                 source={require('../../../assets/images/footwear.jpeg')}
                                 style={styles.fourStackImg}
                             />
                             <Text style={styles.fourStackText}>Footwear</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity 
-                        activeOpacity={0.9}
-                        style={styles.fourStack}>
+                        <TouchableOpacity
+                            activeOpacity={0.9}
+                            style={styles.fourStack}>
                             <Image
                                 source={require('../../../assets/images/watches.jpeg')}
                                 style={styles.fourStackImg}

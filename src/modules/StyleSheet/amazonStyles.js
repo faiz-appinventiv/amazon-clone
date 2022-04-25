@@ -119,9 +119,6 @@ const styles = StyleSheet.create({
     SearchHeader: {
         height:100,
     },
-    productPage: {
-
-    },
     backButton: {
         height: 25,
         width: 25,
@@ -129,7 +126,7 @@ const styles = StyleSheet.create({
     },
     backButtonTouchable: {
         position: 'absolute',
-        top: 48,
+        top: 17,
         left: 5
     },
     loadingView: {
