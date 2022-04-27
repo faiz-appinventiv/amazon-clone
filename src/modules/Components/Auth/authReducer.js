@@ -1,6 +1,6 @@
 initial_State={
     login:true,
-    LoginData:[]
+    LoginData:{}
 }
 
 const AuthReducer=(state=initial_State,action)=>{
@@ -8,7 +8,7 @@ const AuthReducer=(state=initial_State,action)=>{
     switch(type){
         case 'Register':
             // state.LoginData.push(payload)
-            return {...state,LoginData:[...state.LoginData,payload]}
+            return {...state,LoginData:payload}
         case 'Toggle_Login':
             return{...state,...payload}
         default:

@@ -1,5 +1,5 @@
 import { View, Text, StyleSheet, TextInput, KeyboardAvoidingView, Image, TouchableOpacity, FlatList, SafeAreaView, ScrollView } from 'react-native'
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { SliderBox } from "react-native-image-slider-box";
 import axios from 'axios'
 import styles from '../../StyleSheet/amazonStyles'
@@ -7,13 +7,17 @@ import SearchHeader from './searchHeader'
 import { useDispatch } from 'react-redux';
 import { ToggleLogin } from '../Auth/action';
 
-export default function HomePage({ navigation }) {
+export default function HomePage({ navigation ,Scroll}) {
+    // console.log('hhfhfhg',Scroll)
     const [imgArray, setImageArray] = useState([
         "https://source.unsplash.com/1024x768/?nature",
         "https://source.unsplash.com/1024x768/?water",
         "https://source.unsplash.com/1024x768/?girl",
         "https://source.unsplash.com/1024x768/?tree",
     ])
+
+    const ScrollRef=useRef()
+
     const dispatch=useDispatch()
     const [tabArray, setTabArray] = useState([{
         title: 'Mobiles',
@@ -86,6 +90,7 @@ export default function HomePage({ navigation }) {
         // console.log('img:',item.img)
         return (
             <TouchableOpacity style={{ marginHorizontal: 10 }}
+           
             >
                 <Image source={{ uri: item.image }}
                     style={{ height: 40, width: 40, borderRadius: 30, overflow: 'hidden', alignSelf: 'center' }}
@@ -99,7 +104,8 @@ export default function HomePage({ navigation }) {
     return (
         <SafeAreaView style={styles.container}>
             <SearchHeader />
-            <ScrollView bounces={false}>
+            <ScrollView bounces={false}
+            ref={ScrollRef}>
                 <FlatList
                     data={tabArray}
                     renderItem={(item) => (tabView(item))}
@@ -192,7 +198,11 @@ export default function HomePage({ navigation }) {
                         </TouchableOpacity>
                         <TouchableOpacity
                             activeOpacity={0.9}
-                            style={styles.fourStack}>
+                            style={styles.fourStack}
+                            onPress={()=>{
+                                // props.scrollTop(ScrollRef)
+                                Scroll(ScrollRef)
+                            }}>
                             <Image
                                 source={require('../../../assets/images/watches.jpeg')}
                                 style={styles.fourStackImg}

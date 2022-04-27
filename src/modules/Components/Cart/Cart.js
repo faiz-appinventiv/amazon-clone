@@ -1,10 +1,18 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { View, Text ,SafeAreaView,FlatList } from 'react-native'
+import React ,{useState} from 'react'
+import SearchHeader from '../home/searchHeader'
+
 
 export default function Cart() {
+  const [emptyCart,setEmptyCart]=useState(true)
   return (
-    <View>
-      <Text>Cart</Text>
-    </View>
+    <SafeAreaView>
+      <SearchHeader/>
+      <View>
+        <FlatList
+        
+        />
+      </View>
+    </SafeAreaView>
   )
 }

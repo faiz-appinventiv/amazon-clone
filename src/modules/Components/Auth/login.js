@@ -21,7 +21,6 @@ export default function Login({ navigation, route }) {
   const [passwordWarning, setPasswordWarning] = useState(false)
   const [mobileWarning, setMobileWarning] = useState(false)
   const dispatch = useDispatch()
-  const [log,setLog]=useState({})
 
   // AsyncStorage.getItem("Email").then((value) => {
   //   setLog({ "Email": value });
@@ -37,12 +36,12 @@ export default function Login({ navigation, route }) {
       setEmailWarning(true)
       setNoAccountFound(false)
     }
-    else if (!LoginData.some((element) => element.Email === email)) {
+    else if (LoginData.Email != email) {
       setEmailWarning(false)
       setNoAccountFound(true)
       navigation.setParams({ toggleAccount: true })
     }
-    else if (LoginData.some((element) => element.Email === email)) {
+    else if (LoginData.Email === email) {
       // navigation.navigate()
       setNoAccountFound(false)
       setEmailWarning(false)

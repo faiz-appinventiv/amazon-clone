@@ -25,11 +25,11 @@ export default function Password({ navigation ,route}) {
             setPasswordWarning(true)
             setWrongPassword(false)
         }
-        else if (!LoginData.some((element)=>element.Password===password)) {
+        else if (LoginData.Password!=password) {
             setPasswordWarning(false)
             setWrongPassword(true)
         }
-        else if (LoginData.some((element)=>element.Password===password)) {
+        else if (LoginData.Password===password) {
             // navigation.navigate()
             setWrongPassword(false)
             setPasswordWarning(false)
