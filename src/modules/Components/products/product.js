@@ -1,15 +1,64 @@
-import { View, Text, TouchableOpacity, Image, TextInput, ScrollView, FlatList } from 'react-native'
-import React from 'react'
+import { View, Text, TouchableOpacity, Image, TextInput, ScrollView, FlatList, SafeAreaView } from 'react-native'
+import React, { useState } from 'react'
 import styles from '../../StyleSheet/amazonStyles'
-import { SafeAreaView } from 'react-native-safe-area-context'
+import ModalCard from './quantityModal'
+import loginStyles from '../../StyleSheet/loginStyle'
+import moment from 'moment'
+import { AddItem } from './action'
+import { useDispatch, useSelector } from 'react-redux'
 
 
 export default function Product({ navigation, route }) {
   // console.log("route.params", route.params)
+  // console.log('moment', moment().add(2, 'days').calendar());
+  const [quantity, setQuantity] = useState(1)
+  const [quantityModalVisiblity, setQuantityModalVisiblity] = useState(false)
+  const dispatch=useDispatch()
+  const {cart}=useSelector(state=>state.CartReducer)
+  console.log('cart',cart)
+
+  const [offerData, setOfferData] = useState([
+    {
+      offerName: 'No Cost EMI',
+      offerDesc: 'Upto $10.47 EMI interest savings on select Credit Cards'
+    },
+    {
+      offerName: 'No Cost EMI',
+      offerDesc: 'Upto $10.47 EMI interest savings on select Credit Cards'
+    },
+    {
+      offerName: 'No Cost EMI',
+      offerDesc: 'Upto $10.47 EMI interest savings on select Credit Cards'
+    }
+  ])
+
+  const renderOffers = ({ item }) => {
+    return (
+      <View style={styles.offerBlock}>
+        <Text style={styles.offerBlockNameText}>{item.offerName}</Text>
+        <Text style={styles.offerBlockDescText}
+          numberOfLines={3}
+        >{item.offerDesc}</Text>
+      </View>
+    )
+  }
 
   const back = () => {
     navigation.goBack()
   }
+
+  const quantitySet = () => {
+    setQuantityModalVisiblity(true)
+  }
+  console.log('route',route.params)
+
+  const addCartList=()=>{
+    let payload ={...route.params}
+    console.log('product payload',payload)
+    dispatch(AddItem(payload))
+  }
+  console.log('cart',cart)
+
   return (
     <SafeAreaView style={styles.productPage}>
       <View style={styles.header}>
@@ -39,15 +88,16 @@ export default function Product({ navigation, route }) {
             resizeMode={'contain'} />
         </TouchableOpacity>
       </View>
-      <View style={styles.addressBar}>
-        <TouchableOpacity style={{ marginLeft: '1.5%' }}>
-          <Image
-            source={require('../../../assets/images/icons/location.png')}
-            style={{ height: 15, width: 15 }} />
-        </TouchableOpacity>
-        <Text style={styles.addressText}>{"Deliver to Faiz - New Delhi 110025"}</Text>
-      </View>
-      <ScrollView style={styles.mainProduct}>
+
+      <ScrollView style={styles.mainProduct} bounces={false}>
+        <View style={styles.addressBar}>
+          <TouchableOpacity style={{ marginLeft: '1.5%' }}>
+            <Image
+              source={require('../../../assets/images/icons/location.png')}
+              style={{ height: 15, width: 15 }} />
+          </TouchableOpacity>
+          <Text style={styles.addressText}>{"Deliver to Faiz - New Delhi 110025"}</Text>
+        </View>
         <View style={styles.topProduct}>
           <Text style={styles.titleText}>{route.params.title}</Text>
           <Image
@@ -68,11 +118,60 @@ export default function Product({ navigation, route }) {
               style={styles.discountImg} />
             <Text style={styles.offerText}>Offers</Text>
           </View>
-          {/* <FlatList
-          data={}
-          /> */}
+          <FlatList
+            data={offerData}
+            renderItem={renderOffers}
+            horizontal
+            bounces={false}
+            showsHorizontalScrollIndicator={false}
+          />
         </View>
+        <View style={styles.priceTab}>
+          <View style={styles.totalPriceView}>
+            <Text style={styles.totalText}>{'Total: '}</Text>
+            <Text style={styles.totalPriceText}>{`$${route.params.price}`}</Text>
+          </View>
+          <View style={styles.freeDeliveryBlock}>
+            <Text style={styles.freeDeliveryText}>{'FREE Delivery: '}</Text>
+            <Text style={styles.deliveryTimeText}>{moment().local().add(2, 'days').format('dddd, MMMM DD')}</Text>
+          </View>
+          <Text>{`Order With${moment().endOf('day').fromNow()}`}</Text>
+          <Text style={styles.inStockText}>{'In stock.'}</Text>
+          <TouchableOpacity activeOpacity={0.8} style={styles.quantityBox}
+            onPress={quantitySet}>
+            <Text>{"Qty: "}</Text>
+            <Text>{quantity}</Text>
+            <View style={styles.downImgContainer}>
+              <Image source={require('../../../assets/images/icons/down.png')}
+                style={styles.downImg} />
+            </View>
+          </TouchableOpacity>
+          <View>
+          <TouchableOpacity style={{ ...loginStyles.buyNowButton }}
+          activeOpacity={0.8}>
+            <Text style={loginStyles.loginEmailButton}>{"Buy Now"}</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={{ ...loginStyles.addToCartButton }}
+          activeOpacity={0.8}
+          onPress={addCartList}>
+            <Text style={loginStyles.loginEmailButton}>{"Add to Cart"}</Text>
+          </TouchableOpacity>
+          <View style={styles.secureTransactionView}>
+            <Image source={require('../../../assets/images/icons/lock.png')}
+            style={{height:13,width:13, opacity:0.6}}/>
+            <TouchableOpacity>
+            <Text style={styles.secureTransactionText}> {"Secure transaction"}</Text>
+            </TouchableOpacity>
+          </View>
+          <Text style={{marginTop:10}}>{"Sold by Appario retail Private Ltd and Fulfilled by Amazon"}</Text>
+          <Text style={{marginTop:10}}>{"Gift-wrap available"}</Text>
+          <TouchableOpacity style={styles.addToWishListView}> 
+            <Text style={styles.addToWishListText}>{"ADD TO WISH LIST"}</Text>
+          </TouchableOpacity>
+        </View>
+        </View>  
       </ScrollView>
+      <ModalCard visibility={quantityModalVisiblity} setVisibility={setQuantityModalVisiblity} setQuantity={setQuantity} quantity={quantity} />
     </SafeAreaView>
   )
 }

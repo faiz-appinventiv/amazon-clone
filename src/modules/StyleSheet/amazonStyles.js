@@ -1,6 +1,6 @@
 import { StyleSheet, Dimensions } from "react-native"
 
-const {height,width} =Dimensions.get('screen')
+const { height, width } = Dimensions.get('screen')
 
 const styles = StyleSheet.create({
     container: {
@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         flexDirection: 'row',
         width: width * 0.85,
-        height: height/20,
+        height: height / 20,
         shadowColor: "#000",
         shadowOffset: {
             width: 0,
@@ -26,15 +26,15 @@ const styles = StyleSheet.create({
         elevation: 4,
     },
     searchBar: {
-        marginHorizontal:10,
+        marginHorizontal: 10,
         borderRadius: 10,
         fontSize: 18,
-        color:'black'
+        color: 'black'
     },
     headerText: {
         fontSize: 30,
         fontWeight: '800',
-        color:'black'
+        color: 'black'
     },
     header: {
         backgroundColor: '#70feff',
@@ -51,8 +51,8 @@ const styles = StyleSheet.create({
     },
     micTouchable: {
         position: 'absolute',
-        right: 15,
-        top:15
+        right: 8,
+        top: 16
         // marginTop: "12%",
     },
     scanImage: {
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
     },
     addressText: {
         marginLeft: '3%',
-        color:'black'
+        color: 'black'
     },
     imgSliderView: {
         marginTop: "1%",
@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
         fontSize: 25,
         fontWeight: '600',
         marginLeft: 10,
-        color:'black'
+        color: 'black'
     },
     loading: {
         height: 20,
@@ -117,16 +117,17 @@ const styles = StyleSheet.create({
         // justifyContent:'center'
     },
     SearchHeader: {
-        height:100,
+        height: 100,
     },
     backButton: {
         height: 25,
         width: 25,
         resizeMode: 'contain',
+        opacity:0.8
     },
     backButtonTouchable: {
         position: 'absolute',
-        top: 17,
+        top: 15,
         left: 5
     },
     loadingView: {
@@ -158,7 +159,7 @@ const styles = StyleSheet.create({
         fontSize: 20,
         fontWeight: '700',
         color: 'grey',
-        color:'black'
+        color: 'black'
     },
     productPrice: {
         marginLeft: 40,
@@ -175,16 +176,18 @@ const styles = StyleSheet.create({
     topProduct: {
         backgroundColor: 'white',
         paddingTop: 10,
+        height: height / 1.95
     },
     offerTab: {
         padding: 5,
         marginTop: 5,
-        backgroundColor: 'white'
+        backgroundColor: 'white',
+        height: height / 6
     },
     titleText: {
         fontSize: 17,
         marginHorizontal: 20,
-        color:'black'
+        color: 'black'
     },
     offersPortion: {
         marginHorizontal: 10,
@@ -199,7 +202,7 @@ const styles = StyleSheet.create({
     offerText: {
         fontSize: 15,
         fontWeight: '600',
-        color:'black'
+        color: 'black'
     },
     youMightLike: {
         marginTop: 20
@@ -215,17 +218,17 @@ const styles = StyleSheet.create({
         fontWeight: '700',
         textAlign: 'center',
         marginBottom: 10,
-        color:'black'
+        color: 'black'
     },
     sigInPerkText: {
         fontSize: 16,
         marginBottom: 15,
-        color:'black'
+        color: 'black'
     },
     loginStartTextView: {
-        paddingHorizontal:30,
-        marginTop:20,
-        color:'black'
+        paddingHorizontal: 30,
+        marginTop: 20,
+        color: 'black'
     },
     signInButton: {
         backgroundColor: '#EEB559',
@@ -247,10 +250,10 @@ const styles = StyleSheet.create({
     },
     authButtonText: {
         fontSize: 15,
-        color:'black'
+        color: 'black'
     },
-    loginButton:{
-        marginVertical:15
+    loginButton: {
+        marginVertical: 15
     },
     fourStackImg: {
         height: 175,
@@ -258,16 +261,16 @@ const styles = StyleSheet.create({
         borderRadius: 20,
     },
     fourStackInner: {
-        flexDirection:'row',
-        justifyContent:'space-between',
-        marginHorizontal:12,
-        height:200
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        marginHorizontal: 12,
+        height: 200
     },
     fourStackText: {
         fontSize: 18,
         fontWeight: '400',
-        alignSelf:'center',
-        color:'black'
+        alignSelf: 'center',
+        color: 'black'
     },
     // fourStack: {
     //     height: 210,
@@ -278,110 +281,244 @@ const styles = StyleSheet.create({
     //     alignItems:'center'
     //     // marginVertical:5
     // },
-    bellIcon:{
-        height:22,
-        width:22,
-        position:'absolute',
-        right:50,
-        top:5
+    bellIcon: {
+        height: 22,
+        width: 22,
+        position: 'absolute',
+        right: 50,
+        top: 5
         // justifyContent:'flex-end'
     },
-    userSearchIcon:{
-        height:21,
-        width:21,
-        position:'absolute',
-        right:10,
-        top:5
+    userSearchIcon: {
+        height: 21,
+        width: 21,
+        position: 'absolute',
+        right: 10,
+        top: 5
     },
-    userHeader:{
-        flexDirection:'row',
+    userHeader: {
+        flexDirection: 'row',
     },
-    helloText:{
-        fontSize:23,
-        fontStyle:'italic'
+    helloText: {
+        fontSize: 23,
+        fontStyle: 'italic'
     },
-    usernameText:{
-        fontSize:23,
-        fontWeight:'600'
+    usernameText: {
+        fontSize: 23,
+        fontWeight: '600'
     },
-    profileIcon:{
-        height:35,
-        width:35,
+    profileIcon: {
+        height: 35,
+        width: 35,
     },
-    profileIconCont:{
-        right:width/35
+    profileIconCont: {
+        right: width / 35
     },
-    imageBackgroundContainer:{
-       height:height,
-       width:width,
-       paddingHorizontal:width/30,
+    imageBackgroundContainer: {
+        height: height,
+        width: width,
+        paddingHorizontal: width / 30,
     },
-    userScreenButtonsContainer:{
-        justifyContent:'space-around',
-        alignItems:'center',
-        marginTop:height/50
+    userScreenButtonsContainer: {
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        marginTop: height / 50
     },
-    userScreenButtons:{
-        height:height/17,
-        width:width*0.46,
-        alignItems:'center',
-        backgroundColor:'#F3F3F2',
-        borderColor:'#ccc',
-        borderWidth:1,
-        justifyContent:'center',
-        borderRadius:30,
-        marginBottom:height/100
+    userScreenButtons: {
+        height: height / 17,
+        width: width * 0.46,
+        alignItems: 'center',
+        backgroundColor: '#F3F3F2',
+        borderColor: '#ccc',
+        borderWidth: 1,
+        justifyContent: 'center',
+        borderRadius: 30,
+        marginBottom: height / 100
     },
-    userinnerButtonsContainer:{
-        flexDirection:'row',
+    userinnerButtonsContainer: {
+        flexDirection: 'row',
         // justifyContent:'space-between'
 
     },
-    buttonText:{
-        fontSize:15,
-        fontWeight:'400'
+    buttonText: {
+        fontSize: 15,
+        fontWeight: '400'
     },
-    orderImg:{
-        height:100,
-        width:60,
+    orderImg: {
+        height: 100,
+        width: 60,
     },
-    orderImgContainer:{
-        alignItems:'center',
-        justifyContent:'center',
-        height:height/6,
-        backgroundColor:'white',
-        width:width/2.2,
-        borderRadius:10,
-        borderWidth:1,
-        borderColor:'#ccc'
+    orderImgContainer: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: height / 6,
+        backgroundColor: 'white',
+        width: width / 2.2,
+        borderRadius: 10,
+        borderWidth: 1,
+        borderColor: '#ccc'
     },
-    orderHistoryContainer:{
-        flexDirection:'row',
+    orderHistoryContainer: {
+        flexDirection: 'row',
         // marginHorizontal:width/40,
-        justifyContent:'space-between',
-        alignItems:'center',
-        marginTop:height/60,
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        marginTop: height / 60,
     },
-    orderText:{
-        fontSize:20,
-        fontWeight:'600'
+    orderText: {
+        fontSize: 20,
+        fontWeight: '600'
     },
-    orderContainer:{
-        marginVertical:10
+    orderContainer: {
+        marginVertical: 10
     },
-    keepShoppingImgContainer:{
-        alignItems:'center',
-        justifyContent:'center',
-        height:height/8,
-        backgroundColor:'white',
-        width:width/3.3,
+    keepShoppingImgContainer: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: height / 8,
+        backgroundColor: 'white',
+        width: width / 3.3,
+        borderRadius: 10,
+        borderWidth: 1,
+        borderColor: '#ccc',
+    },
+    keepShoppingImg: {
+        height: height / 10,
+        width: width / 8,
+    },
+    offerBlock: {
+        borderRadius: 5,
+        borderWidth: 1,
+        borderColor: '#ccc',
+        height: height / 9,
+        width: width / 3,
+        padding: 7,
+        marginHorizontal: 8
+    },
+    offerBlockNameText: {
+        fontSize: 13.5,
+        fontWeight: '700',
+    },
+    offerBlockDescText: {
+        marginTop: 5
+    },
+    totalPriceView: {
+        flexDirection: 'row',
+        // padding:7,
+        alignItems: 'flex-end'
+    },
+    totalText: {
+        fontSize: 17,
+        fontWeight: '500'
+    },
+    totalPriceText: {
+        fontSize: 20,
+        fontWeight: '600',
+    },
+    priceTab: {
+        padding: 12,
+        marginTop: 5,
+        backgroundColor: 'white',
+        height: height / 1.6
+    },
+    freeDeliveryBlock: {
+        marginTop: 10,
+        flexDirection: 'row',
+        alignItems: 'flex-end'
+    },
+    freeDeliveryText: {
+        fontSize: 15,
+        fontWeight: '400'
+    },
+    deliveryTimeText: {
+        fontSize: 15,
+        fontWeight: '600'
+    },
+    quantityBox: {
+        marginTop:10,
+        backgroundColor: '#F3F3F2',
+        height: height / 22,
+        width: width * 0.23,
+        flexDirection: 'row',
+        alignItems: 'center',
+        padding: 10,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 3,
+        },
+        shadowOpacity: 0.29,
+        shadowRadius: 4.65,
+
+        elevation: 7,
         borderRadius:10,
-        borderWidth:1,
-        borderColor:'#ccc',
     },
-    keepShoppingImg:{
-        height:height/10,
-        width:width/8,
+    inStockText:{
+        marginTop: height / 20,
+        color:'green'
+    },
+    downImg:{
+        height:20,
+        width:20,
+    },
+    downImgContainer:{
+        left:10,
+        justifyContent:'center'
+    },
+    modalView:{
+        height:height/1.8,
+        backgroundColor:'#white',
+        borderRadius:10,
+        overflow:'hidden'
+    },
+    modal:{
+        width:width/2,
+        alignSelf:'center'
+    },
+    qtyBlock:{
+        // margin:5,
+        borderBottomWidth:1,
+        borderColor:'#ccc',
+        height:height*0.05,
+        backgroundColor:'white',
+        paddingLeft:15,
+        justifyContent:'center',
+    },
+    qtyModalHeader:{
+        flexDirection:'row',
+        backgroundColor:'#F3F3F2',
+        height:height*0.05,
+        justifyContent:'space-around',
+        alignItems:'center'
+    },
+    qtyHeaderText:{
+        fontSize:17,
+        fontWeight:'700'
+    },
+    selectedQtyBlock:{
+        borderWidth:1,
+        borderColor:'#0A839F',
+        borderLeftWidth:4,
+        height:height*0.05,
+        backgroundColor:'#C6F8FB',
+        paddingLeft:11,
+        justifyContent:'center'
+    },
+    secureTransactionView:{
+        flexDirection:'row',
+        alignItems:'center'
+    },
+    secureTransactionText:{
+        fontSize:14,
+        color:'#3DA8C3',
+        marginLeft:5
+    },
+    addToWishListText:{
+        color:'#3DA8C3',
+        fontSize:16,
+    },
+    addToWishListView:{
+        marginTop:10
     }
 })
 

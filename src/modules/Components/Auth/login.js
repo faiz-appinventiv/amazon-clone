@@ -212,7 +212,7 @@ export default function Login({ navigation, route }) {
                   <Text style={loginStyles.warning}>{"By enrolling your mobile phone number, you consent to receiving automated seurity notifications via text message from Amazon. You can opt out by removing your mobile number on the Login and Security page located in Your Account settings. Message and data located rates nay apply"}</Text>
                   <TouchableOpacity style={{ ...loginStyles.signInButton }}
                     onPress={checkEntry}>
-                    <Text style={styles.loginEmailButton}>{"Register"}</Text>
+                    <Text style={loginStyles.loginEmailButton}>{"Register"}</Text>
                   </TouchableOpacity>
                   <View style={loginStyles.privacyTextView}>
                     <Text style={loginStyles.privacyText}>{"By creating an account or logging in, you agree to Amazon's "}</Text>

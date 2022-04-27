@@ -1,4 +1,6 @@
-import { StyleSheet } from "react-native";
+import { Dimensions, StyleSheet } from "react-native";
+
+const {height,width}=Dimensions.get('screen')
 
 const loginStyles = StyleSheet.create({
     container: {
@@ -202,6 +204,44 @@ const loginStyles = StyleSheet.create({
     },
     loginEmailButton:{
         color:'black'
+    },
+    buyNowButton:{
+        backgroundColor: '#FFB432',
+        marginTop: height/30,
+        height: 38,
+        // marginHorizontal: 16,
+        borderRadius: 5,
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginBottom: 10,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 1,
+        },
+        shadowOpacity: 0.22,
+        shadowRadius: 2.22,
+
+        elevation: 3,
+    },
+    addToCartButton:{
+        backgroundColor:'#FBDB3B',
+        marginTop: 8,
+        height: 38,
+        // marginHorizontal: 16,
+        borderRadius: 5,
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginBottom: 10,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 1,
+        },
+        shadowOpacity: 0.22,
+        shadowRadius: 2.22,
+
+        elevation: 3,
     }
 })
 export default loginStyles
