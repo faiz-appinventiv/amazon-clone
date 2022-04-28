@@ -255,9 +255,13 @@ const styles = StyleSheet.create({
     loginButton: {
         marginVertical: 15
     },
+    fourStack:{
+        height:160,
+        width:'48%'
+    },
     fourStackImg: {
-        height: 175,
-        width: 175,
+        height: "100%",
+        width: '100%',
         borderRadius: 20,
     },
     fourStackInner: {
@@ -627,7 +631,7 @@ const styles = StyleSheet.create({
     },
     subtotalText:{
         fontSize:22,
-        Color:'black'
+        color:'black'
     },
     dollarSignText:{
         fontSize:13,
