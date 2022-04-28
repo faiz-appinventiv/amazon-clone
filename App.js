@@ -1,5 +1,4 @@
 import React from 'react'
-import {SafeAreaView,Text} from 'react-native'
 import RootRouter from './src/modules/router'
 import { PersistGate } from 'redux-persist/integration/react'
 import { persistor, store } from './src/modules/store/index'

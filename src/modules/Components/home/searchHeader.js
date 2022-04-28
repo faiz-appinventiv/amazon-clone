@@ -25,14 +25,6 @@ export default function SearchHeader({ navigation }) {
                         resizeMode={'contain'} />
                 </TouchableOpacity>
             </View>
-            <View style={styles.addressBar}>
-                <TouchableOpacity style={{ marginLeft: '1.5%' }}>
-                    <Image
-                        source={require('../../../assets/images/icons/location.png')}
-                        style={{ height: 15, width: 15 }} />
-                </TouchableOpacity>
-                <Text style={styles.addressText}>{"Deliver to Faiz - New Delhi 110025"}</Text>
-            </View>
         </View>
     )
 }

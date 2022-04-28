@@ -2,11 +2,14 @@ import { View, Text, SafeAreaView, ImageBackground, Dimensions, Image, TextCompo
 import React from 'react'
 import styles from '../../StyleSheet/amazonStyles'
 import { useSelector } from 'react-redux'
+import AsyncStorage from '@react-native-async-storage/async-storage'
 
 
 export default function User() {
   const { height, width } = Dimensions.get('screen')
-  const { LoginData } = useSelector(store => store.AuthReducer)
+  const {LoginData} = useSelector(store => store.AuthReducer)
+  console.log('LoginData',LoginData)
+
 
   return (
     <SafeAreaView>
@@ -88,7 +91,7 @@ export default function User() {
                     resizeMode={'contain'}
                   />
                 </View>
-                <Text>{"Smartphones"}</Text>
+                <Text style={styles.keepShoppingText}>{"Smartphones"}</Text>
               </TouchableOpacity>
               <TouchableOpacity>
                 <View style={styles.keepShoppingImgContainer}>
@@ -98,7 +101,7 @@ export default function User() {
                     resizeMode={'contain'}
                   />
                 </View>
-                <Text>{"Smartphones"}</Text>
+                <Text style={styles.keepShoppingText}>{"Beauty"}</Text>
               </TouchableOpacity>
               <TouchableOpacity>
                 <View style={styles.keepShoppingImgContainer}>
@@ -108,7 +111,7 @@ export default function User() {
                     resizeMode={'contain'}
                   />
                 </View>
-                <Text>{"Smartphones"}</Text>
+                <Text style={styles.keepShoppingText}>{"Home Appliance"}</Text>
               </TouchableOpacity>
             </View>
             <View style={styles.orderHistoryContainer}>
@@ -120,8 +123,8 @@ export default function User() {
                     resizeMode={'contain'}
                   />
                 </View>
-                <Text>{"Smartphones"}</Text>
-              </TouchableOpacity>
+                <Text style={styles.keepShoppingText}>{"Men's Clothing"}</Text>             
+                </TouchableOpacity>
               <TouchableOpacity>
                 <View style={styles.keepShoppingImgContainer}>
                   <Image
@@ -130,8 +133,8 @@ export default function User() {
                     resizeMode={'contain'}
                   />
                 </View>
-                <Text>{"Smartphones"}</Text>
-              </TouchableOpacity>
+                <Text style={styles.keepShoppingText}>{"Women's Clothing"}</Text>              
+                </TouchableOpacity>
               <TouchableOpacity>
                 <View style={styles.keepShoppingImgContainer}>
                   <Image
@@ -140,7 +143,7 @@ export default function User() {
                     resizeMode={'contain'}
                   />
                 </View>
-                <Text>{"Smartphones"}</Text>
+                <Text style={styles.keepShoppingText}>{"Travel"}</Text>
               </TouchableOpacity>
             </View>
           </View>

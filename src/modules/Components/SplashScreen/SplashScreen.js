@@ -3,7 +3,7 @@ import React from 'react'
 import styles from '../../StyleSheet/amazonStyles'
 import { useEffect } from 'react'
 import { useSelector } from 'react-redux'
-import AsyncStorage from '@react-native-async-storage/async-storage'
+import FastImage from 'react-native-fast-image'
 
 export default function SplashScreen({navigation}) {
     
@@ -14,7 +14,7 @@ export default function SplashScreen({navigation}) {
           (login)?
             navigation.replace('AuthRouter'):
             navigation.replace('BottomTab')
-        },100)
+        },200)
     })
 
   return (
@@ -23,6 +23,26 @@ export default function SplashScreen({navigation}) {
         resizeMode={'contain'}
         style={styles.splashLogo}
         />
+        {/* <FastImage
+        style={{ width: 200, height: 200 }}
+        source={require('../../../assets/images/amazonSplash.gif'),{
+            headers: { Authorization: 'someAuthToken' },
+            priority: FastImage.priority.normal,
+        }}
+        style={styles.splashLogo}
+        resizeMode={FastImage.resizeMode.contain}
+    /> */}
+    {/* <FastImage
+        style={{ width: 200, height: 200 }}
+        source={{
+            uri: 'https://unsplash.it/400/400?image=1',
+            headers: { Authorization: 'someAuthToken' },
+            priority: FastImage.priority.normal,
+        }}
+        resizeMode={FastImage.resizeMode.contain}
+    /> */}
+
+
     </View>
   )
 }

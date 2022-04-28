@@ -6,6 +6,8 @@ import styles from '../../StyleSheet/amazonStyles'
 import SearchHeader from './searchHeader'
 import { useDispatch } from 'react-redux';
 import { ToggleLogin } from '../Auth/action';
+import AddressBar from './addressBar';
+import ProductList from '../productList';
 
 export default function HomePage({ navigation ,Scroll}) {
     // console.log('hhfhfhg',Scroll)
@@ -44,46 +46,7 @@ export default function HomePage({ navigation ,Scroll}) {
         title: 'Mobiles',
         image: 'https://m.media-amazon.com/images/I/61fy+u9uqPL._SX569_.jpg'
     }])
-    const [data, setData] = useState([])
-    useEffect(() => {
-        axios.get("https://fakestoreapi.com/products/").then(res => {
-            setData(res.data)
-            // console.log(data)
-        }).catch(err => console.log(err))
-    }, [])
 
-    const navigProduct = (item) => {
-        navigation.navigate("Product", item)
-    }
-
-    const renderItem = ({ item }) => {
-        // console.log(item)
-        if (item.image != null)
-            return (
-                <View>
-                    <TouchableOpacity
-                        onPress={() => navigProduct(item)}
-                        activeOpacity={0.8}
-                        style={styles.product}>
-                        <Image source={{ uri: item.image }}
-                            style={styles.productImage}
-                        />
-                        <Text numberOfLines={1} style={{ padding: 10, color: 'black' }}>{item.title}</Text>
-                        <Text style={{ paddingHorizontal: 10, color: 'black' }}>$ {item.price}</Text>
-                    </TouchableOpacity>
-                </View>
-            )
-    }
-
-    const listEmpty = () => {
-        return (
-            <View style={styles.loadingView}>
-                <Image source={require('../../../assets/images/icons/loading.gif')}
-                    style={styles.loading}
-                />
-            </View>
-        )
-    }
 
     const tabView = ({ item }) => {
         // console.log("Inside TabView", item)
@@ -104,8 +67,10 @@ export default function HomePage({ navigation ,Scroll}) {
     return (
         <SafeAreaView style={styles.container}>
             <SearchHeader />
+            
             <ScrollView bounces={false}
             ref={ScrollRef}>
+                <AddressBar/>
                 <FlatList
                     data={tabArray}
                     renderItem={(item) => (tabView(item))}
@@ -125,20 +90,7 @@ export default function HomePage({ navigation ,Scroll}) {
 
                     }}
                 />
-                <View style={styles.youMightLike}>
-                    <Text style={styles.productLikeHeader}>{"You Might Like"}</Text>
-                    <FlatList
-                        data={data}
-                        renderItem={(item) => (renderItem(item))}
-                        horizontal={true}
-                        keyExtractor={(item) => item.id}
-                        ListEmptyComponent={listEmpty}
-                        ItemSeparatorComponent={() => (<View style={{ marginRight: 10 }}></View>)}
-                        style={styles.productSlide}
-                        showsHorizontalScrollIndicator={false}
-                        bounces={false}
-                    />
-                </View>
+               <ProductList navigation={navigation}/>
                 <View style={{
                     // backgroundColor:'red',
                     height: 230,

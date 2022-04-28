@@ -8,13 +8,14 @@ const styles = StyleSheet.create({
     },
     search: {
         borderRadius: 5,
-        padding: 10,
+        paddingLeft: 10,
         margin: 6,
+        height:43,
         marginLeft: '3%',
+        alignItems:'center',
         backgroundColor: 'white',
         flexDirection: 'row',
         width: width * 0.85,
-        height: height / 20,
         shadowColor: "#000",
         shadowOffset: {
             width: 0,
@@ -38,7 +39,9 @@ const styles = StyleSheet.create({
     },
     header: {
         backgroundColor: '#70feff',
-        flexDirection: 'row'
+        flexDirection: 'row',
+        alignItems:'center',
+        height:55,
     },
     searchImage: {
         height: 20,
@@ -52,8 +55,6 @@ const styles = StyleSheet.create({
     micTouchable: {
         position: 'absolute',
         right: 8,
-        top: 16
-        // marginTop: "12%",
     },
     scanImage: {
         height: 20,
@@ -62,7 +63,6 @@ const styles = StyleSheet.create({
     scanImageCon: {
         position: 'absolute',
         right: 10,
-        top: 10,
         opacity: 0.5
     },
     addressBar: {
@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
         // justifyContent:'center'
     },
     SearchHeader: {
-        height: 100,
+        height: 55,
     },
     backButton: {
         height: 25,
@@ -146,7 +146,7 @@ const styles = StyleSheet.create({
         alignSelf: 'center',
     },
     mainProduct: {
-        paddingTop: 3,
+        // paddingTop: 3,
     },
     productPageImage: {
         height: 300,
@@ -162,7 +162,7 @@ const styles = StyleSheet.create({
         color: 'black'
     },
     productPrice: {
-        marginLeft: 40,
+        marginLeft: 30,
         marginTop: 20,
         flexDirection: 'row',
         marginBottom: 10
@@ -176,17 +176,17 @@ const styles = StyleSheet.create({
     topProduct: {
         backgroundColor: 'white',
         paddingTop: 10,
-        height: height / 1.95
+        height: 420,
     },
     offerTab: {
         padding: 5,
         marginTop: 5,
         backgroundColor: 'white',
-        height: height / 6
+        height: 150
     },
     titleText: {
         fontSize: 17,
-        marginHorizontal: 20,
+        marginHorizontal: 13,
         color: 'black'
     },
     offersPortion: {
@@ -301,11 +301,13 @@ const styles = StyleSheet.create({
     },
     helloText: {
         fontSize: 23,
-        fontStyle: 'italic'
+        fontStyle: 'italic',
+        color:'black'
     },
     usernameText: {
         fontSize: 23,
-        fontWeight: '600'
+        fontWeight: '600',
+        color:'black'
     },
     profileIcon: {
         height: 35,
@@ -342,7 +344,8 @@ const styles = StyleSheet.create({
     },
     buttonText: {
         fontSize: 15,
-        fontWeight: '400'
+        fontWeight: '400',
+        color:'black'
     },
     orderImg: {
         height: 100,
@@ -367,7 +370,8 @@ const styles = StyleSheet.create({
     },
     orderText: {
         fontSize: 20,
-        fontWeight: '600'
+        fontWeight: '600',
+        color:'black'
     },
     orderContainer: {
         marginVertical: 10
@@ -390,17 +394,19 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         borderWidth: 1,
         borderColor: '#ccc',
-        height: height / 9,
-        width: width / 3,
+        height: 90,
+        width: 150,
         padding: 7,
         marginHorizontal: 8
     },
     offerBlockNameText: {
         fontSize: 13.5,
         fontWeight: '700',
+        color:'black'
     },
     offerBlockDescText: {
-        marginTop: 5
+        marginTop: 5,
+        color:'black'
     },
     totalPriceView: {
         flexDirection: 'row',
@@ -409,17 +415,19 @@ const styles = StyleSheet.create({
     },
     totalText: {
         fontSize: 17,
-        fontWeight: '500'
+        fontWeight: '500',
+        color:'black'
     },
     totalPriceText: {
         fontSize: 20,
         fontWeight: '600',
+        color:'black'
     },
     priceTab: {
         padding: 12,
         marginTop: 5,
         backgroundColor: 'white',
-        height: height / 1.6
+        height: 510
     },
     freeDeliveryBlock: {
         marginTop: 10,
@@ -428,17 +436,19 @@ const styles = StyleSheet.create({
     },
     freeDeliveryText: {
         fontSize: 15,
-        fontWeight: '400'
+        fontWeight: '400',
+        color:'black'
     },
     deliveryTimeText: {
         fontSize: 15,
-        fontWeight: '600'
+        fontWeight: '600',
+        color:'black'
     },
     quantityBox: {
         marginTop:10,
         backgroundColor: '#F3F3F2',
-        height: height / 22,
-        width: width * 0.23,
+        height: 38,
+        width:85,
         flexDirection: 'row',
         alignItems: 'center',
         padding: 10,
@@ -454,7 +464,7 @@ const styles = StyleSheet.create({
         borderRadius:10,
     },
     inStockText:{
-        marginTop: height / 20,
+        marginTop: 45,
         color:'green'
     },
     downImg:{
@@ -479,7 +489,7 @@ const styles = StyleSheet.create({
         // margin:5,
         borderBottomWidth:1,
         borderColor:'#ccc',
-        height:height*0.05,
+        height:40,
         backgroundColor:'white',
         paddingLeft:15,
         justifyContent:'center',
@@ -487,19 +497,20 @@ const styles = StyleSheet.create({
     qtyModalHeader:{
         flexDirection:'row',
         backgroundColor:'#F3F3F2',
-        height:height*0.05,
+        height:40,
         justifyContent:'space-around',
         alignItems:'center'
     },
     qtyHeaderText:{
         fontSize:17,
-        fontWeight:'700'
+        fontWeight:'700',
+        color:'black'
     },
     selectedQtyBlock:{
         borderWidth:1,
         borderColor:'#0A839F',
         borderLeftWidth:4,
-        height:height*0.05,
+        height:40,
         backgroundColor:'#C6F8FB',
         paddingLeft:11,
         justifyContent:'center'
@@ -511,7 +522,7 @@ const styles = StyleSheet.create({
     secureTransactionText:{
         fontSize:14,
         color:'#3DA8C3',
-        marginLeft:5
+        marginLeft:5,
     },
     addToWishListText:{
         color:'#3DA8C3',
@@ -519,6 +530,158 @@ const styles = StyleSheet.create({
     },
     addToWishListView:{
         marginTop:10
+    },
+    keepShoppingText:{
+        color:'black',
+        fontSize:14
+    },
+    orderWithinText:{
+        color:'black',
+        fontSize:14
+    },
+    qtyText:{
+        color:'black',
+        fontSize:14
+    },
+    cartImage:{
+        height:100,
+        width:90,
+    },
+    cartItemContainer:{
+        height:170,
+        width:width,
+        padding:10,
+        backgroundColor:'white',
+    },
+    cartContentContainer:{
+        
+        height:110,
+        flexDirection:'row',
+        padding:3
+        // alignItems: 'center',
+        // justifyContent: 'center',
+    },
+    deleteQtyImg:{
+        height:18,
+        width:18,
+    },
+    deleteQtyImgContainer:{
+        backgroundColor:'#ccc',
+        width:'30%',
+        height:'100%',
+        justifyContent:'center',
+        alignItems:'center',
+        alignSelf:'flex-start'
+    },
+    qtyChangeView:{
+        width:'37%',
+        height:40,
+        // justifyContent:'center',
+        flexDirection:'row',
+        borderWidth:1,
+        borderColor:'#ccc',
+        borderRadius:10,
+        overflow:'hidden'
+    },
+    quantityContainer:{
+        backgroundColor:'white',
+        width:'40%',
+        height:'100%',
+        justifyContent:'center',
+        alignItems:'center',
+        borderRadius:10,
+    },
+    productPriceCartItemText:{
+        fontSize:20,
+        color:'black',
+        fontWeight:'800'
+    },
+    titleCartText:{
+        height:40,
+        color:'black'
+    },
+    itemManipulation:{
+        flexDirection:'row',
+        alignItems:'center',
+        justifyContent:"space-around"
+    },
+    deleteCartItem:{
+        backgroundColor:'white',
+        borderWidth:1,
+        borderColor:'#ccc',
+        alignItems:'center',
+        justifyContent:'center',
+        height:35,
+        borderRadius:10,
+        width:'20%'
+    },
+    safeForLater:{
+        backgroundColor:'white',
+        borderWidth:1,
+        borderColor:'#ccc',
+        alignItems:'center',
+        justifyContent:'center',
+        height:35,
+        borderRadius:10,
+        width:'30%'
+    },
+    subtotalText:{
+        fontSize:22,
+        Color:'black'
+    },
+    dollarSignText:{
+        fontSize:13,
+        color:'black',
+        marginTop:3
+    },
+    amountText:{
+        fontSize:24,
+        color:'black',
+        fontWeight:'600'
+    },
+    subTotalContainer:{
+        flexDirection:'row',
+        paddingVertical:6,
+        alignItems:'flex-start',
+        backgroundColor:'white',
+       
+    },
+    checkOutContainer:{
+        borderBottomWidth:1,
+        borderBottomColor:'#ccc',
+        backgroundColor:'white'
+    },
+    cartIconImg:{
+        backgroundColor:'#F0F0F0',
+        height:60,
+        width:60,
+        borderRadius:20,
+    },
+    bottomImgContainer:{
+        backgroundColor:'white',
+        height:110,
+        justifyContent:'space-around',
+        alignItems:'center',
+        flexDirection:'row',
+        paddingTop:5
+    },
+    bottonInnerContainer:{
+        alignItems:'center',
+        justifyContent:'center'
+    },
+    bottomCartText:{
+        fontSize:14,
+        color:'#3DA8C3'
+    },
+    emptyCartgif:{
+        height:100,
+        width:100,
+    },
+    listEmptyCartComponent:{
+        flexDirection:'row',
+        backgroundColor:'white',
+        alignItems:'center',
+        justifyContent:'space-around'
     }
 })
 

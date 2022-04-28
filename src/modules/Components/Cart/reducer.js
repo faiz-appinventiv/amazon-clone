@@ -8,9 +8,11 @@ const CartReducer=(state=initial_State,action)=>{
         case 'Add_Item':
             state.cart.push(payload)
             console.log('state',state.cart)
-            console('payload',payload)
-            return {...state,cart:payload}
+            console.log('payload',payload)
+            return {...state}
         case 'Delete_Item':
+            return{...state,cart:payload}
+        case 'Modify_Quantity':
             return{...state,cart:payload}
         default:
             return state
