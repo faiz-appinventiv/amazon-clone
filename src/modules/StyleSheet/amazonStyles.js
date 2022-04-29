@@ -1,3 +1,4 @@
+import { useBottomTabBarHeight } from "@react-navigation/bottom-tabs"
 import { StyleSheet, Dimensions } from "react-native"
 
 const { height, width } = Dimensions.get('screen')
@@ -724,7 +725,7 @@ const styles = StyleSheet.create({
     menuListText: {
         color: 'black',
         margin: 7,
-        fontSize:15
+        fontSize: 15
     },
     amazonPayImage: {
         height: 60,
@@ -732,9 +733,9 @@ const styles = StyleSheet.create({
     },
     menuHeaderComponentContainer: {
         margin: 10,
-        marginHorizontal:10,
-        width:'94%',
-        alignSelf:'center',
+        marginHorizontal: 10,
+        width: '94%',
+        alignSelf: 'center',
         backgroundColor: 'white',
         height: 100,
         flexDirection: 'row',
@@ -782,50 +783,76 @@ const styles = StyleSheet.create({
         height: 30,
         width: '100%'
     },
-    menuListFooterContainer:{
-        backgroundColor:'white',
-        width:'93%',
-        alignSelf:'center',
-        borderRadius:10,
-        padding:10,
-        marginVertical:5
+    menuListFooterContainer: {
+        backgroundColor: 'white',
+        width: '93%',
+        alignSelf: 'center',
+        borderRadius: 10,
+        padding: 10,
+        marginVertical: 5
     },
-    menuFooterSettings:{
-        flexDirection:'row',
-        justifyContent:'space-between',
-        height:30,
-        alignItems:'center'
+    menuFooterSettings: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        height: 30,
+        alignItems: 'center'
     },
-    menuShowSettingImg:{
-        resizeMode:'contain',
-        height:15,
-        width:15,
-        alignSelf:'center'
+    menuShowSettingImg: {
+        resizeMode: 'contain',
+        height: 15,
+        width: 15,
+        alignSelf: 'center'
     },
-    menuSettingButton:{
-        flexDirection:'row',
-        marginVertical:10,
-        justifyContent:'flex-start'
+    menuSettingButton: {
+        flexDirection: 'row',
+        marginVertical: 10,
+        justifyContent: 'flex-start'
     },
-    indiaFlagImg:{
-        resizeMode:'contain',
-        height:15,
-        width:15,
-        alignSelf:'center',
+    indiaFlagImg: {
+        resizeMode: 'contain',
+        height: 15,
+        width: 15,
+        alignSelf: 'center',
         // marginLeft:5
     },
-    settingsText:{
-        fontSize:16,
-        marginHorizontal:10,
-        color:'black'
+    settingsText: {
+        fontSize: 16,
+        marginHorizontal: 10,
+        color: 'black'
     },
-    menuListFooterContainerAlt:{
-        backgroundColor:'white',
-        width:'93%',
-        alignSelf:'center',
+    menuListFooterContainerAlt: {
+        backgroundColor: 'white',
+        width: '93%',
+        alignSelf: 'center',
+        borderRadius: 10,
+        padding: 10,
+        height: 400
+    },
+    menuInnerContainer: {
+        backgroundColor: 'green',
+        // height:height,
+        width: width
+    },
+    bottomMenuBar: {
+        flexDirection: 'row',
+        backgroundColor: 'white',
+        height: 60,
+        borderTopStartRadius: 25,
+        borderTopEndRadius: 25,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    bottomMenuButton:{
+        padding:5,
+        borderColor:'#ccc',
+        borderWidth:1,
+        marginHorizontal:8,
         borderRadius:10,
-        padding:10,
-        height:400
+        padding:5,
+        height:32,
+        // width:'15%',
+        alignItems:'center',
+        justifyContent:'center'
     }
 })
 
