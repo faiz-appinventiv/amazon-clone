@@ -7,7 +7,7 @@ import SearchHeader from './searchHeader'
 import { useDispatch } from 'react-redux';
 import { ToggleLogin } from '../Auth/action';
 import AddressBar from './addressBar';
-import ProductList from '../productList';
+import ProductList from '../ProductList/productList';
 
 export default function HomePage({ navigation ,Scroll}) {
     // console.log('hhfhfhg',Scroll)
@@ -131,16 +131,6 @@ export default function HomePage({ navigation ,Scroll}) {
                     </View>
                     <View style={styles.fourStackInner}>
                         <TouchableOpacity style={styles.fourStack}
-                            onPress={() => {
-                                let payload = {
-                                    login: true
-                                }
-                                dispatch(ToggleLogin(payload))
-                                navigation.reset({
-                                    index:0,
-                                    routes:[{name:'AuthRouter'}]
-                                })
-                            }}
                             activeOpacity={0.9}>
                             <Image
                                 source={require('../../../assets/images/footwear.jpeg')}

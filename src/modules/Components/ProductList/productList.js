@@ -1,16 +1,17 @@
 import { View, Text,TouchableOpacity,Image, FlatList } from 'react-native'
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import styles from '../StyleSheet/amazonStyles'
+import styles from '../../StyleSheet/amazonStyles'
+import { AddData } from './action'
+import { useDispatch, useSelector } from 'react-redux'
 
 export default function ProductList(props) {
-    const [data,setData]=useState([])
+    const dispatch=useDispatch()
+    const {data}=useSelector(store=>store.ProductReducer)
+    // console.log('DATA',data)
 
     useEffect(() => {
-        axios.get("https://fakestoreapi.com/products/").then(res => {
-            setData(res.data)
-            // console.log(data)
-        }).catch(err => console.log(err))
+        dispatch(AddData())
     }, [])
 
     const navigProduct = (item) => {
@@ -39,7 +40,7 @@ export default function ProductList(props) {
     const listEmpty = () => {
         return (
             <View style={styles.loadingView}>
-                <Image source={require('../../assets/images/icons/loading.gif')}
+                <Image source={require('../../../assets/images/icons/loading.gif')}
                     style={styles.loading}
                 />
             </View>

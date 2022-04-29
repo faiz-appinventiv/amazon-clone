@@ -14,7 +14,8 @@ export default function BottomTab() {
   return (
     <BottomTabNavigator.Navigator initialRouteName='Home'
       labeled={false}
-      screenOptions={{ tabBarShowLabel: false, headerShown: false , tabBarHideOnKeyboard:true}}
+      screenOptions={{ tabBarShowLabel: false, headerShown: false , tabBarHideOnKeyboard:true
+      }}
 
       // labeled={false}
       barStyle={{ backgroundColor: '#2DBFF8' }}

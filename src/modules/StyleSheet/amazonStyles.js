@@ -10,9 +10,9 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         paddingLeft: 10,
         margin: 6,
-        height:43,
+        height: 43,
         marginLeft: '3%',
-        alignItems:'center',
+        alignItems: 'center',
         backgroundColor: 'white',
         flexDirection: 'row',
         width: width * 0.85,
@@ -38,10 +38,10 @@ const styles = StyleSheet.create({
         color: 'black'
     },
     header: {
-        backgroundColor: '#70feff',
+        // backgroundColor: '#70feff',
         flexDirection: 'row',
-        alignItems:'center',
-        height:55,
+        alignItems: 'center',
+        height: 55,
     },
     searchImage: {
         height: 20,
@@ -123,7 +123,7 @@ const styles = StyleSheet.create({
         height: 25,
         width: 25,
         resizeMode: 'contain',
-        opacity:0.8
+        opacity: 0.8
     },
     backButtonTouchable: {
         position: 'absolute',
@@ -255,9 +255,9 @@ const styles = StyleSheet.create({
     loginButton: {
         marginVertical: 15
     },
-    fourStack:{
-        height:160,
-        width:'48%'
+    fourStack: {
+        height: 160,
+        width: '48%'
     },
     fourStackImg: {
         height: "100%",
@@ -306,12 +306,12 @@ const styles = StyleSheet.create({
     helloText: {
         fontSize: 23,
         fontStyle: 'italic',
-        color:'black'
+        color: 'black'
     },
     usernameText: {
         fontSize: 23,
         fontWeight: '600',
-        color:'black'
+        color: 'black'
     },
     profileIcon: {
         height: 35,
@@ -349,7 +349,7 @@ const styles = StyleSheet.create({
     buttonText: {
         fontSize: 15,
         fontWeight: '400',
-        color:'black'
+        color: 'black'
     },
     orderImg: {
         height: 100,
@@ -375,7 +375,7 @@ const styles = StyleSheet.create({
     orderText: {
         fontSize: 20,
         fontWeight: '600',
-        color:'black'
+        color: 'black'
     },
     orderContainer: {
         marginVertical: 10
@@ -406,11 +406,11 @@ const styles = StyleSheet.create({
     offerBlockNameText: {
         fontSize: 13.5,
         fontWeight: '700',
-        color:'black'
+        color: 'black'
     },
     offerBlockDescText: {
         marginTop: 5,
-        color:'black'
+        color: 'black'
     },
     totalPriceView: {
         flexDirection: 'row',
@@ -420,12 +420,12 @@ const styles = StyleSheet.create({
     totalText: {
         fontSize: 17,
         fontWeight: '500',
-        color:'black'
+        color: 'black'
     },
     totalPriceText: {
         fontSize: 20,
         fontWeight: '600',
-        color:'black'
+        color: 'black'
     },
     priceTab: {
         padding: 12,
@@ -441,18 +441,18 @@ const styles = StyleSheet.create({
     freeDeliveryText: {
         fontSize: 15,
         fontWeight: '400',
-        color:'black'
+        color: 'black'
     },
     deliveryTimeText: {
         fontSize: 15,
         fontWeight: '600',
-        color:'black'
+        color: 'black'
     },
     quantityBox: {
-        marginTop:10,
+        marginTop: 10,
         backgroundColor: '#F3F3F2',
         height: 38,
-        width:85,
+        width: 85,
         flexDirection: 'row',
         alignItems: 'center',
         padding: 10,
@@ -465,227 +465,367 @@ const styles = StyleSheet.create({
         shadowRadius: 4.65,
 
         elevation: 7,
-        borderRadius:10,
+        borderRadius: 10,
     },
-    inStockText:{
+    inStockText: {
         marginTop: 45,
-        color:'green'
+        color: 'green'
     },
-    downImg:{
-        height:20,
-        width:20,
+    downImg: {
+        height: 20,
+        width: 20,
     },
-    downImgContainer:{
-        left:10,
-        justifyContent:'center'
+    downImgContainer: {
+        left: 10,
+        justifyContent: 'center'
     },
-    modalView:{
-        height:height/1.8,
-        backgroundColor:'#white',
-        borderRadius:10,
-        overflow:'hidden'
+    modalView: {
+        height: height / 1.8,
+        backgroundColor: '#white',
+        borderRadius: 10,
+        overflow: 'hidden'
     },
-    modal:{
-        width:width/2,
-        alignSelf:'center'
+    modal: {
+        width: width / 2,
+        alignSelf: 'center'
     },
-    qtyBlock:{
+    qtyBlock: {
         // margin:5,
-        borderBottomWidth:1,
-        borderColor:'#ccc',
-        height:40,
-        backgroundColor:'white',
-        paddingLeft:15,
-        justifyContent:'center',
+        borderBottomWidth: 1,
+        borderColor: '#ccc',
+        height: 40,
+        backgroundColor: 'white',
+        paddingLeft: 15,
+        justifyContent: 'center',
     },
-    qtyModalHeader:{
-        flexDirection:'row',
-        backgroundColor:'#F3F3F2',
-        height:40,
-        justifyContent:'space-around',
-        alignItems:'center'
+    qtyModalHeader: {
+        flexDirection: 'row',
+        backgroundColor: '#F3F3F2',
+        height: 40,
+        justifyContent: 'space-around',
+        alignItems: 'center'
     },
-    qtyHeaderText:{
-        fontSize:17,
-        fontWeight:'700',
-        color:'black'
+    qtyHeaderText: {
+        fontSize: 17,
+        fontWeight: '700',
+        color: 'black'
     },
-    selectedQtyBlock:{
-        borderWidth:1,
-        borderColor:'#0A839F',
-        borderLeftWidth:4,
-        height:40,
-        backgroundColor:'#C6F8FB',
-        paddingLeft:11,
-        justifyContent:'center'
+    selectedQtyBlock: {
+        borderWidth: 1,
+        borderColor: '#0A839F',
+        borderLeftWidth: 4,
+        height: 40,
+        backgroundColor: '#C6F8FB',
+        paddingLeft: 11,
+        justifyContent: 'center'
     },
-    secureTransactionView:{
-        flexDirection:'row',
-        alignItems:'center'
+    secureTransactionView: {
+        flexDirection: 'row',
+        alignItems: 'center'
     },
-    secureTransactionText:{
-        fontSize:14,
-        color:'#3DA8C3',
-        marginLeft:5,
+    secureTransactionText: {
+        fontSize: 14,
+        color: '#3DA8C3',
+        marginLeft: 5,
     },
-    addToWishListText:{
-        color:'#3DA8C3',
-        fontSize:16,
+    addToWishListText: {
+        color: '#3DA8C3',
+        fontSize: 16,
     },
-    addToWishListView:{
-        marginTop:10
+    addToWishListView: {
+        marginTop: 10
     },
-    keepShoppingText:{
-        color:'black',
-        fontSize:14
+    keepShoppingText: {
+        color: 'black',
+        fontSize: 14
     },
-    orderWithinText:{
-        color:'black',
-        fontSize:14
+    orderWithinText: {
+        color: 'black',
+        fontSize: 14
     },
-    qtyText:{
-        color:'black',
-        fontSize:14
+    qtyText: {
+        color: 'black',
+        fontSize: 14
     },
-    cartImage:{
-        height:100,
-        width:90,
+    cartImage: {
+        height: 100,
+        width: 90,
     },
-    cartItemContainer:{
-        height:170,
-        width:width,
-        padding:10,
-        backgroundColor:'white',
+    cartItemContainer: {
+        height: 170,
+        width: width,
+        padding: 10,
+        backgroundColor: 'white',
     },
-    cartContentContainer:{
-        
-        height:110,
-        flexDirection:'row',
-        padding:3
+    cartContentContainer: {
+
+        height: 110,
+        flexDirection: 'row',
+        padding: 3
         // alignItems: 'center',
         // justifyContent: 'center',
     },
-    deleteQtyImg:{
-        height:18,
-        width:18,
+    deleteQtyImg: {
+        height: 18,
+        width: 18,
     },
-    deleteQtyImgContainer:{
-        backgroundColor:'#ccc',
-        width:'30%',
-        height:'100%',
-        justifyContent:'center',
-        alignItems:'center',
-        alignSelf:'flex-start'
+    deleteQtyImgContainer: {
+        backgroundColor: '#ccc',
+        width: '30%',
+        height: '100%',
+        justifyContent: 'center',
+        alignItems: 'center',
+        alignSelf: 'flex-start'
     },
-    qtyChangeView:{
-        width:'37%',
-        height:40,
+    qtyChangeView: {
+        width: '37%',
+        height: 40,
         // justifyContent:'center',
-        flexDirection:'row',
-        borderWidth:1,
-        borderColor:'#ccc',
-        borderRadius:10,
-        overflow:'hidden'
+        flexDirection: 'row',
+        borderWidth: 1,
+        borderColor: '#ccc',
+        borderRadius: 10,
+        overflow: 'hidden'
     },
-    quantityContainer:{
+    quantityContainer: {
+        backgroundColor: 'white',
+        width: '40%',
+        height: '100%',
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderRadius: 10,
+    },
+    productPriceCartItemText: {
+        fontSize: 20,
+        color: 'black',
+        fontWeight: '800'
+    },
+    titleCartText: {
+        height: 40,
+        color: 'black'
+    },
+    itemManipulation: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: "space-around"
+    },
+    deleteCartItem: {
+        backgroundColor: 'white',
+        borderWidth: 1,
+        borderColor: '#ccc',
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: 35,
+        borderRadius: 10,
+        width: '20%'
+    },
+    safeForLater: {
+        backgroundColor: 'white',
+        borderWidth: 1,
+        borderColor: '#ccc',
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: 35,
+        borderRadius: 10,
+        width: '30%'
+    },
+    subtotalText: {
+        fontSize: 22,
+        color: 'black'
+    },
+    dollarSignText: {
+        fontSize: 13,
+        color: 'black',
+        marginTop: 3
+    },
+    amountText: {
+        fontSize: 24,
+        color: 'black',
+        fontWeight: '600'
+    },
+    subTotalContainer: {
+        flexDirection: 'row',
+        paddingVertical: 6,
+        alignItems: 'flex-start',
+        backgroundColor: 'white',
+
+    },
+    checkOutContainer: {
+        borderBottomWidth: 1,
+        borderBottomColor: '#ccc',
+        backgroundColor: 'white'
+    },
+    cartIconImg: {
+        backgroundColor: '#F0F0F0',
+        height: 60,
+        width: 60,
+        borderRadius: 20,
+    },
+    bottomImgContainer: {
+        backgroundColor: 'white',
+        height: 110,
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        flexDirection: 'row',
+        paddingTop: 5
+    },
+    bottonInnerContainer: {
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    bottomCartText: {
+        fontSize: 14,
+        color: '#3DA8C3'
+    },
+    emptyCartgif: {
+        height: 100,
+        width: 100,
+    },
+    listEmptyCartComponent: {
+        flexDirection: 'row',
+        backgroundColor: 'white',
+        alignItems: 'center',
+        justifyContent: 'space-around'
+    },
+    menuBackground: {
+        height: height,
+        width: width
+    },
+    menuImg: {
+        height: 80,
+        width: '100%',
+    },
+    menuListContainer: {
+        height: 155,
+        backgroundColor: 'white',
+        marginVertical: 8,
+        width: '29%',
+        justifyContent: "space-between",
+        borderRadius: 10,
+        // overflow: 'hidden',
+        borderColor: '#ccc',
+        borderWidth: 1,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 3,
+        },
+        shadowOpacity: 0.27,
+        shadowRadius: 4.65,
+
+        elevation: 6,
+        // alignItems:'center'
+    },
+    menuContainer: {
+        borderTopEndRadius: 45,
+        borderTopStartRadius: 45,
+        overflow: 'hidden'
+    },
+    menuListText: {
+        color: 'black',
+        margin: 7,
+        fontSize:15
+    },
+    amazonPayImage: {
+        height: 60,
+        width: '100%',
+    },
+    menuHeaderComponentContainer: {
+        margin: 10,
+        marginHorizontal:10,
+        width:'94%',
+        alignSelf:'center',
+        backgroundColor: 'white',
+        height: 100,
+        flexDirection: 'row',
+        justifyContent: 'space-evenly',
+        borderRadius: 10,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 3,
+        },
+        shadowOpacity: 0.27,
+        shadowRadius: 4.65,
+
+        elevation: 6,
+    },
+    menuHeaderButtons: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: '43%',
+        marginVertical: 10,
+    },
+    amazonPayImgContainer: {
+        height: 60,
+        backgroundColor: '#F7D55B',
+        width: '100%',
+        alignItems: 'center',
+        borderRadius: 10,
+        borderWidth: 1,
+        borderColor: '#ccc',
+        marginVertical: 5,
+        justifyContent: 'center'
+    },
+    miniTVImgContainer: {
+        height: 60,
+        backgroundColor: '#F6ECCA',
+        width: '100%',
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderRadius: 10,
+        borderWidth: 1,
+        borderColor: '#ccc',
+        marginVertical: 5
+    },
+    miniTvImg: {
+        height: 30,
+        width: '100%'
+    },
+    menuListFooterContainer:{
         backgroundColor:'white',
-        width:'40%',
-        height:'100%',
-        justifyContent:'center',
-        alignItems:'center',
+        width:'93%',
+        alignSelf:'center',
         borderRadius:10,
+        padding:10,
+        marginVertical:5
     },
-    productPriceCartItemText:{
-        fontSize:20,
-        color:'black',
-        fontWeight:'800'
+    menuFooterSettings:{
+        flexDirection:'row',
+        justifyContent:'space-between',
+        height:30,
+        alignItems:'center'
     },
-    titleCartText:{
-        height:40,
+    menuShowSettingImg:{
+        resizeMode:'contain',
+        height:15,
+        width:15,
+        alignSelf:'center'
+    },
+    menuSettingButton:{
+        flexDirection:'row',
+        marginVertical:10,
+        justifyContent:'flex-start'
+    },
+    indiaFlagImg:{
+        resizeMode:'contain',
+        height:15,
+        width:15,
+        alignSelf:'center',
+        // marginLeft:5
+    },
+    settingsText:{
+        fontSize:16,
+        marginHorizontal:10,
         color:'black'
     },
-    itemManipulation:{
-        flexDirection:'row',
-        alignItems:'center',
-        justifyContent:"space-around"
-    },
-    deleteCartItem:{
+    menuListFooterContainerAlt:{
         backgroundColor:'white',
-        borderWidth:1,
-        borderColor:'#ccc',
-        alignItems:'center',
-        justifyContent:'center',
-        height:35,
+        width:'93%',
+        alignSelf:'center',
         borderRadius:10,
-        width:'20%'
-    },
-    safeForLater:{
-        backgroundColor:'white',
-        borderWidth:1,
-        borderColor:'#ccc',
-        alignItems:'center',
-        justifyContent:'center',
-        height:35,
-        borderRadius:10,
-        width:'30%'
-    },
-    subtotalText:{
-        fontSize:22,
-        color:'black'
-    },
-    dollarSignText:{
-        fontSize:13,
-        color:'black',
-        marginTop:3
-    },
-    amountText:{
-        fontSize:24,
-        color:'black',
-        fontWeight:'600'
-    },
-    subTotalContainer:{
-        flexDirection:'row',
-        paddingVertical:6,
-        alignItems:'flex-start',
-        backgroundColor:'white',
-       
-    },
-    checkOutContainer:{
-        borderBottomWidth:1,
-        borderBottomColor:'#ccc',
-        backgroundColor:'white'
-    },
-    cartIconImg:{
-        backgroundColor:'#F0F0F0',
-        height:60,
-        width:60,
-        borderRadius:20,
-    },
-    bottomImgContainer:{
-        backgroundColor:'white',
-        height:110,
-        justifyContent:'space-around',
-        alignItems:'center',
-        flexDirection:'row',
-        paddingTop:5
-    },
-    bottonInnerContainer:{
-        alignItems:'center',
-        justifyContent:'center'
-    },
-    bottomCartText:{
-        fontSize:14,
-        color:'#3DA8C3'
-    },
-    emptyCartgif:{
-        height:100,
-        width:100,
-    },
-    listEmptyCartComponent:{
-        flexDirection:'row',
-        backgroundColor:'white',
-        alignItems:'center',
-        justifyContent:'space-around'
+        padding:10,
+        height:400
     }
 })
 

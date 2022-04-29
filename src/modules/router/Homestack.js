@@ -1,6 +1,6 @@
 import React from "react"
 import HomePage from '../Components/home/index'
-import Product from "../Components/products/product"
+import Product from "../Components/Products/product"
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
 
 export default function HomeStack(props){

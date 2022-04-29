@@ -7,8 +7,6 @@ const CartReducer=(state=initial_State,action)=>{
     switch(type){
         case 'Add_Item':
             state.cart.push(payload)
-            console.log('state',state.cart)
-            console.log('payload',payload)
             return {...state}
         case 'Delete_Item':
             return{...state,cart:payload}
