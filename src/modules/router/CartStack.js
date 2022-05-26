@@ -1,9 +1,9 @@
 import React from "react"
-import HomePage from '../Components/home/index'
 import Product from "../Components/Products/product"
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
+import Cart from "../Components/Cart/Cart"
 
-export default function HomeStack(props){
+export default function CartStack(props){
     
 
     const scrollTop=(ref)=>{
@@ -16,9 +16,9 @@ export default function HomeStack(props){
         
     const Stack = createNativeStackNavigator()
     return(
-        <Stack.Navigator screenOptions={{headerShown:false}}>
-            <Stack.Screen name='HomePage'>
-            {()=><HomePage Scroll={scrollTop} {...props}/>}
+        <Stack.Navigator screenOptions={{headerShown:false}} initialRouteName={Cart}>
+            <Stack.Screen name='Cart'>
+            {()=><Cart Scroll={scrollTop} {...props}/>}
             </Stack.Screen>
             <Stack.Screen name="Product" component={Product}/>
         </Stack.Navigator>

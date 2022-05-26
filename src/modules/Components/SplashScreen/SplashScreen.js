@@ -14,7 +14,7 @@ export default function SplashScreen({navigation}) {
           (login)?
             navigation.replace('AuthRouter'):
             navigation.replace('BottomTab')
-        },200)
+        },500)
     })
 
   return (

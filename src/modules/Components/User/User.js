@@ -73,7 +73,7 @@ export default function User() {
               </TouchableOpacity>
               <TouchableOpacity style={styles.orderImgContainer}>
                 <Image
-                  source={require('../../../assets/images/product1.png')}
+                  source={require('../../../assets/images/product2.png')}
                   style={styles.orderImg}
                   resizeMode={'contain'}
                 />
@@ -86,7 +86,7 @@ export default function User() {
               <TouchableOpacity>
                 <View style={styles.keepShoppingImgContainer}>
                   <Image
-                    source={require('../../../assets/images/product1.png')}
+                    source={require('../../../assets/images/product2.png')}
                     style={styles.keepShoppingImg}
                     resizeMode={'contain'}
                   />
@@ -96,9 +96,9 @@ export default function User() {
               <TouchableOpacity>
                 <View style={styles.keepShoppingImgContainer}>
                   <Image
-                    source={require('../../../assets/images/product1.png')}
+                    source={require('../../../assets/images/beauty.jpeg')}
                     style={styles.keepShoppingImg}
-                    resizeMode={'contain'}
+                    resizeMode={'cover'}
                   />
                 </View>
                 <Text style={styles.keepShoppingText}>{"Beauty"}</Text>
@@ -106,9 +106,9 @@ export default function User() {
               <TouchableOpacity>
                 <View style={styles.keepShoppingImgContainer}>
                   <Image
-                    source={require('../../../assets/images/product1.png')}
+                    source={require('../../../assets/images/Home.jpeg')}
                     style={styles.keepShoppingImg}
-                    resizeMode={'contain'}
+                    resizeMode={'cover'}
                   />
                 </View>
                 <Text style={styles.keepShoppingText}>{"Home Appliance"}</Text>
@@ -118,9 +118,9 @@ export default function User() {
               <TouchableOpacity>
                 <View style={styles.keepShoppingImgContainer}>
                   <Image
-                    source={require('../../../assets/images/product1.png')}
+                    source={require('../../../assets/images/menClothes.jpeg')}
                     style={styles.keepShoppingImg}
-                    resizeMode={'contain'}
+                    resizeMode={'cover'}
                   />
                 </View>
                 <Text style={styles.keepShoppingText}>{"Men's Clothing"}</Text>             
@@ -138,9 +138,9 @@ export default function User() {
               <TouchableOpacity>
                 <View style={styles.keepShoppingImgContainer}>
                   <Image
-                    source={require('../../../assets/images/product1.png')}
+                    source={require('../../../assets/images/womenclothes.jpeg')}
                     style={styles.keepShoppingImg}
-                    resizeMode={'contain'}
+                    resizeMode={'cover'}
                   />
                 </View>
                 <Text style={styles.keepShoppingText}>{"Travel"}</Text>

@@ -1,6 +1,5 @@
 import { View, Text,TouchableOpacity,Image, FlatList } from 'react-native'
 import React, { useState, useEffect } from 'react'
-import axios from 'axios'
 import styles from '../../StyleSheet/amazonStyles'
 import { AddData } from './action'
 import { useDispatch, useSelector } from 'react-redux'

@@ -6,6 +6,7 @@ import Cart from '../Components/Cart/Cart'
 import Menu from '../Components/Menu/Menu'
 import { Image } from 'react-native'
 import HomeStack from './Homestack'
+import CartStack from './CartStack'
 
 
 const BottomTabNavigator = createBottomTabNavigator()
@@ -43,7 +44,7 @@ export default function BottomTab() {
           )
         }
       }} />
-      <BottomTabNavigator.Screen name='Cart' component={Cart} options={{
+      <BottomTabNavigator.Screen name='CartStack' component={CartStack} options={{
         tabBarIcon: ({ focused }) => {
           return (focused ?
             <Image source={require('../../assets/images/icons/cartfocused.png')}
