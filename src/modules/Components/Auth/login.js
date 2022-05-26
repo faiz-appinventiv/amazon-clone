@@ -29,7 +29,7 @@ export default function Login({ navigation, route }) {
 
 
   const { LoginData } = useSelector(store => store.AuthReducer)
-  console.log("LoginData", LoginData)
+  // console.log("LoginData", LoginData)
 
   const checkEmail = () => {
     if (email.length == 0) {

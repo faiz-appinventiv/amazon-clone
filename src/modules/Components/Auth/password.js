@@ -110,7 +110,6 @@ export default function Password({ navigation ,route}) {
                         onPress={checkPassword}>
                         <Text style={loginStyles.loginEmailButton}>{"Sign-In"}</Text>
                     </TouchableOpacity>
-                    <Text style={loginStyles.orText}>{"or"}</Text>
                 </View>
             </KeyboardAwareScrollView>
         </SafeAreaView>

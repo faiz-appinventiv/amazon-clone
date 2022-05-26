@@ -26,7 +26,7 @@ export default function HomePage({navigation, Scroll}) {
   const ScrollRef = useRef();
 
   // const dispatch = useDispatch();
-  const [tabArray, setTabArray] = useState([
+  const tabArray = [
     {
       title: 'Mobiles',
       image: 'https://m.media-amazon.com/images/I/61fy+u9uqPL._SX569_.jpg',
@@ -60,7 +60,7 @@ export default function HomePage({navigation, Scroll}) {
       image:
         'https://media.istockphoto.com/photos/box-of-toys-on-the-floor-teddy-bear-in-boxvintage-tone-charitable-picture-id1017309510?k=20&m=1017309510&s=612x612&w=0&h=hlrEqEYcyrYjEqlkmJhugTepGVtzjkGohyPdnD5uK3o=',
     },
-  ]);
+  ]
 
   useEffect(() => {
     const ScrollToIndex = navigation.addListener('tabPress', e => {
